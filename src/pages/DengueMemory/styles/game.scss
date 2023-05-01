@@ -1,0 +1,192 @@
+#DengueMemory {
+  .gamePlay {
+    text-align: center;
+    display: flex;
+    margin: auto;
+    font-size: 14vw;
+    color: #ff0000;
+    border-bottom: 1px solid black;
+    width: 86%;
+    margin-top: 2vh;
+    justify-content: center;
+    .sec,
+    .miliSec {
+      display: inline-block;
+      padding-top: 1.4vh;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+      font-size: 11vw;
+      margin-top: 0vh;
+    }
+  }
+  .testCon {
+    margin: auto;
+    margin-top: 0px;
+    width: 14vw;
+    height: 14vw;
+  }
+  .confetti {
+    margin: auto;
+    margin-top: 0px;
+    width: 14vw;
+    height: 14vw;
+    display: none;
+  }
+  .stopDengueTxt {
+    font-size: 9vw;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 3vh;
+    line-height: 1;
+    span {
+      color: #ff0000;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+      font-size: 6vw;
+    }
+  }
+  .unclickable {
+    pointer-events: none;
+  }
+  .game {
+    .toNotice {
+      display: flex;
+      justify-content: space-between;
+      width: 82%;
+      margin: auto;
+      margin-top: 3vh;
+    }
+  }
+  .break-pic,
+  .lift-pic,
+  .overturn-pic,
+  .change-pic,
+  .keep-pic,
+  .dengueFlip {
+    width: 14vw;
+    height: 14vw;
+    background-size: 14vw 14vw;
+    background-repeat: no-repeat;
+    image-rendering: smooth;
+  }
+  .break-pic-2,
+  .lift-pic-2,
+  .overturn-pic-2,
+  .change-pic-2,
+  .keep-pic-2 {
+    background-size: contain;
+    background-position: center;
+    width: 14vw;
+    height: 14vw;
+    background-repeat: no-repeat;
+    opacity: 0;
+  }
+  .break-pic {
+    background-image: url('../assets/images/break.png');
+  }
+  .break-pic-2 {
+    width: 10vw;
+    height: 10vw;
+    background-image: url('../assets/images/break-2.png');
+  }
+  .lift-pic {
+    background-image: url('../assets/images/lift.png');
+  }
+  .lift-pic-2 {
+    width: 10vw;
+    height: 10vw;
+    background-image: url('../assets/images/lift-2.png');
+  }
+  .overturn-pic {
+    background-image: url('../assets/images/overturn.png');
+  }
+  .overturn-pic-2 {
+    background-image: url('../assets/images/overturn-2.png');
+  }
+  .change-pic {
+    background-image: url('../assets/images/change.png');
+  }
+  .change-pic-2 {
+    width: 10vw;
+    height: 10vw;
+    background-image: url('../assets/images/change-2.png');
+  }
+  .keep-pic {
+    background-image: url('../assets/images/keep.png');
+  }
+  .keep-pic-2 {
+    background-image: url('../assets/images/keep-2.png');
+  }
+  .follow-find-pic,
+  .googleStore-pic,
+  .myEnv-pic,
+  .appStore-pic,
+  .company-pic {
+    width: 11vw;
+    height: 20vw;
+    background-size: 10vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .logo-collect-pic {
+    background-size: 60vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../assets/images/collection.png');
+    width: 60vw;
+  }
+
+  .follow-find-pic {
+    background-image: url('../assets/images/follow_find.png');
+  }
+  .googleStore-pic {
+    background-image: url('../assets/images/googleStore.png');
+  }
+  .myEnv-pic {
+    background-image: url('../assets/images/myEnv.png');
+    background-size: 23vw;
+    width: 23vw;
+    background-position: center;
+  }
+  .company-pic {
+    background-image: url('../assets/images/company.png');
+    width: 23vw;
+    background-size: 23vw;
+  }
+  .appStore-pic {
+    background-image: url('../assets/images/appstore.png');
+    background-size: 9.5vw;
+  }
+
+  .dengueFlip {
+    background-image: url('../assets/images/logo.png');
+    background-size: 14vw 14vw;
+    background-repeat: no-repeat;
+    image-rendering: smooth;
+  }
+  .cardGp {
+    display: flex;
+    width: 88%;
+    margin: auto;
+    flex-wrap: wrap;
+    .card {
+      background-color: white;
+      margin: 1vw;
+      padding: 1vw;
+      margin-left: 0.5vw;
+      box-shadow: 0px 0px 7px -2px #5e5e5e;
+      border: none;
+      width: 16vw;
+      height: 16vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .c {
+        position: absolute;
+        /* top: 0; */
+        margin: 0px;
+      }
+    }
+  }
+}

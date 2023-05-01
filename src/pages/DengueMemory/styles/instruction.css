@@ -1,0 +1,110 @@
+#DengueMemory .howToPlay {
+  color: #ff0000;
+  font-size: 8vw;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 4vh; }
+
+#DengueMemory button.btn.memo.ani-tap-1 {
+  margin-top: 7vh; }
+
+#DengueMemory .ani-one {
+  text-align: center; }
+
+#DengueMemory .card {
+  background-color: white;
+  margin: 1vw;
+  padding: 1vw;
+  margin-left: 0.5vw;
+  box-shadow: 0px 0px 7px -2px #5e5e5e;
+  border: none;
+  width: 16vw;
+  height: 16vw;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #DengueMemory .card .c {
+    position: absolute;
+    /* top: 0; */
+    margin: 0px; }
+
+#DengueMemory .memo {
+  letter-spacing: 1.5px;
+  border-radius: 2vw;
+  font-size: 6vw;
+  width: 47vw;
+  margin: 9vh auto auto;
+  padding: 0vw;
+  height: 10vw;
+  text-align: center; }
+
+#DengueMemory .instruct {
+  font-size: 4.5vw;
+  text-align: center;
+  margin-top: 2.4vh;
+  letter-spacing: 0.1vw;
+  line-height: 1; }
+  #DengueMemory .instruct span {
+    color: #ff0000; }
+
+#DengueMemory .toRemember {
+  display: flex;
+  justify-content: space-between;
+  width: 86%;
+  margin: auto;
+  margin-top: 1vh; }
+  #DengueMemory .toRemember .instructPho {
+    width: 14vw;
+    height: 14vw;
+    margin: auto; }
+  #DengueMemory .toRemember .instructDetail {
+    text-align: center;
+    margin-top: 0.7vh; }
+    #DengueMemory .toRemember .instructDetail .instructTitle {
+      text-transform: uppercase;
+      font-size: 4vw;
+      border-bottom: 1px solid black; }
+      #DengueMemory .toRemember .instructDetail .instructTitle span {
+        color: #ff0000; }
+    #DengueMemory .toRemember .instructDetail .detail {
+      font-size: 2.1vw;
+      line-height: 1;
+      margin-top: 0.3vh; }
+
+#DengueMemory .demo {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: auto;
+  margin-top: 2vh; }
+  #DengueMemory .demo .instructPho {
+    width: 14vw;
+    height: 14vw;
+    margin: auto; }
+  #DengueMemory .demo .up {
+    margin-left: auto;
+    flex-direction: row;
+    display: flex; }
+  #DengueMemory .demo .demoPic {
+    background-color: white;
+    margin: 1vw;
+    padding: 1vw;
+    display: flex;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+    box-shadow: 0px 0px 20px -2px #5e5e5e; }
+  #DengueMemory .demo .down {
+    margin-right: auto;
+    flex-direction: row;
+    display: flex; }
+
+#DengueMemory .tap-play {
+  margin-top: 2vh;
+  width: 32vw;
+  font-size: 4vw;
+  margin-top: 2vh;
+  height: 5vh;
+  line-height: normal; }
+  #DengueMemory .tap-play img {
+    width: 1.5vw !important;
+    margin-left: 1.5vw; }

@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url('fonts/Gotham-Book.otf');
+  }
+  @font-face {
+    font-family: 'Gotham-Bold';
+    src: url('fonts/Gotham-Bold.otf');
+  }
+.time{
+   font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+.home
+{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img/home.png')
+}
+.bus-number
+{
+    font-family: Gotham-Bold;
+    color: #fff;
+    position: absolute;
+    font-size: 71px;
+    top: 305px;
+    width: 100%;
+}
+.bus-number-p
+{
+    text-align: center;
+    margin:0;
+}
+.bus-number-arr
+{
+    font-family: Gotham-Bold;
+    color: #fff;
+    position: absolute;
+    font-size: 71px;
+    top: 305px;
+    width: 100%;
+}
+.bus-number-arr-p{
+    margin:0;
+    text-align: center;
+}
+.hello{
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Gotham-Bold;
+    color:#fff;
+}
+.app
+{
+    width: 100vw;
+    height: 100vh;
+    background: #295caa ;
+}
+.bus-time
+{
+    font-family: Gotham-Bold;
+    font-size: 105px;
+    color: #fff;
+    position: absolute;
+    top: 395px;
+    width: 100%;
+}
+.bus-time-p,.bus-time-arr-p{
+    margin:0;
+    text-align: center;
+}
+.bus-time-arr
+{
+    font-family: Gotham-Bold;
+    font-size: 105px;
+    color: #fff;
+    position: absolute;
+    top: 395px;
+    width: 100%;
+}

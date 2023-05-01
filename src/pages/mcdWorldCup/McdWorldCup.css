@@ -1,0 +1,76 @@
+@font-face {
+  font-family: SpeeDeeBold;
+  src: url(./fonts/speedee-bold.ttf); }
+
+#mcd-world-cup {
+  background: url(./images/main-bg.jpg) no-repeat center;
+  height: 100%; }
+  #mcd-world-cup span {
+    margin-right: -1px; }
+  #mcd-world-cup .chicken-gp {
+    position: absolute;
+    top: 33.5%;
+    left: 4.5%; }
+    #mcd-world-cup .chicken-gp .chicken {
+      font-size: 42px;
+      font-family: "SpeeDeeBold";
+      line-height: 1em;
+      letter-spacing: -1px; }
+    #mcd-world-cup .chicken-gp img {
+      width: 327px;
+      margin-left: -4px;
+      margin-bottom: 12px; }
+  #mcd-world-cup .hide {
+    display: none; }
+  #mcd-world-cup .frame-1-third {
+    font-size: 100px !important;
+    line-height: 0.98em !important; }
+  #mcd-world-cup .new-line {
+    display: block; }
+  #mcd-world-cup .frame-1-seventh {
+    font-size: 110px !important; }
+  #mcd-world-cup .frame-1-sixth {
+    font-size: 104px !important;
+    line-height: 0.9em !important;
+    letter-spacing: -6px !important; }
+  #mcd-world-cup .first-4 {
+    font-size: 108px !important; }
+  #mcd-world-cup .first-2-char,
+  #mcd-world-cup .first-3-char,
+  #mcd-world-cup .first-4-char,
+  #mcd-world-cup .first-5-char,
+  #mcd-world-cup .first-6-char,
+  #mcd-world-cup .first-7-char {
+    visibility: hidden; }
+  #mcd-world-cup .frame-1-fourth {
+    font-size: 100px !important; }
+  #mcd-world-cup .frame-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 52.5%;
+    height: 611px;
+    display: flex;
+    align-items: center; }
+  #mcd-world-cup .first-frame-txt {
+    font-size: 99px;
+    position: absolute;
+    width: 74%;
+    letter-spacing: -2px;
+    font-family: SpeeDeeBold;
+    margin-left: 14%;
+    line-height: 0.95em; }
+    #mcd-world-cup .first-frame-txt .red {
+      color: #da2026;
+      letter-spacing: -2px; }
+  #mcd-world-cup .ball {
+    position: absolute;
+    top: 46%;
+    left: -7.2%; }
+  #mcd-world-cup .ball-animate {
+    animation: rotate 8s linear infinite; }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }

@@ -1,0 +1,281 @@
+:root {
+  --main-green: #139144;
+  --gray: #4d4d4d; }
+
+@font-face {
+  font-family: SubwayBold;
+  src: url("./fonts/subway-sans-bold.otf"); }
+
+@font-face {
+  font-family: SubwayMedium;
+  src: url("./fonts/subway-sans-medium.otf"); }
+
+@font-face {
+  font-family: SubwaySuper;
+  src: url("./fonts/subway-sans-super.otf"); }
+
+.template-game {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  /**
+    .play-title-ref,
+  .templateRef,
+  .camRef, */ }
+  .template-game .playFrameRef,
+  .template-game .hee-yahh-anim-ref {
+    transform: scale(0); }
+  .template-game .playFrameRef,
+  .template-game .playAgainFrameRef {
+    animation: bounce ease 1.2s infinite; }
+  .template-game .hide {
+    visibility: hidden;
+    opacity: 0;
+    display: none; }
+  .template-game .btn {
+    font-family: SubwayBold;
+    font-size: 3.39em;
+    z-index: 111;
+    position: relative;
+    padding: 16px 0px;
+    width: 46%;
+    color: white;
+    background: var(--main-green);
+    border: none;
+    margin: auto;
+    border-radius: 20px;
+    height: auto; }
+  .template-game .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; }
+  .template-game #second-page,
+  .template-game #game-page,
+  .template-game #email-page,
+  .template-game #final-page,
+  .template-game #canvas {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%; }
+  .template-game .black {
+    color: black; }
+  .template-game #first-page {
+    transition: all 1s ease-out;
+    position: absolute;
+    height: 100%;
+    width: 100%; }
+    .template-game #first-page .bg {
+      position: absolute; }
+    .template-game #first-page .txt {
+      position: absolute;
+      width: 80%;
+      z-index: 11;
+      top: 61%;
+      left: 50%;
+      transform: translate(-50%, 0%); }
+    .template-game #first-page .play-btn {
+      font-family: SubwayBold;
+      top: 78%;
+      left: 50%; }
+    .template-game #first-page .first-page-btn-ref {
+      left: 28%;
+      top: 80%;
+      animation: bounce ease 1.2s infinite; }
+  .template-game #second-page {
+    z-index: 111; }
+    .template-game #second-page .text-gp {
+      text-align: center;
+      position: relative;
+      top: 47%;
+      transform: translate(-50%, -50%);
+      left: 50%; }
+    .template-game #second-page .header {
+      color: var(--main-green);
+      font-size: 3.4em;
+      font-family: "SubwayBold";
+      margin-bottom: 10px; }
+    .template-game #second-page .second-page-desc {
+      font-size: 1.5em;
+      font-family: "SubwayMedium";
+      width: 80%;
+      margin: auto;
+      margin-bottom: 26px;
+      color: #4d4d4d; }
+    .template-game #second-page .second-page-term {
+      font-size: 3.39em;
+      font-family: "SubwayBold";
+      width: 80%;
+      margin: auto;
+      margin-top: 30px;
+      color: var(--main-green); }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-10%); }
+  50% {
+    transform: translateY(20%); }
+  100% {
+    transform: translateY(-10%); } }
+  .template-game #game-page {
+    text-align: center;
+    z-index: 111111; }
+    .template-game #game-page #template {
+      opacity: 0;
+      visibility: hidden; }
+    .template-game #game-page #second-template-ref,
+    .template-game #game-page #third-template-ref {
+      visibility: hidden;
+      opacity: 0; }
+    .template-game #game-page .counter-header .how-to-play {
+      margin-top: 0px;
+      font-size: 6em;
+      top: 149px; }
+      .template-game #game-page .counter-header .how-to-play::before {
+        content: "";
+        display: inline-block; }
+    .template-game #game-page .counter-header .play-desc {
+      margin-top: 247px;
+      font-size: 4.5em; }
+    .template-game #game-page .how-to-play {
+      font-size: 5em;
+      font-family: "SubwayBold";
+      color: var(--main-green);
+      z-index: 111;
+      position: absolute;
+      margin: auto;
+      width: 100%;
+      margin-top: 126px; }
+    .template-game #game-page .play-desc {
+      font-size: 3.2em;
+      width: 85%;
+      font-family: "SubwayBold";
+      color: var(--gray);
+      z-index: 111;
+      position: relative;
+      margin: auto;
+      margin-top: 218px; }
+    .template-game #game-page .frame-goes-txt {
+      margin-top: 18px; }
+    .template-game #game-page .play-btn {
+      margin-top: 107%; }
+    .template-game #game-page img {
+      width: 100%;
+      height: 1920px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11; }
+  .template-game #email-page {
+    z-index: 111;
+    text-align: center; }
+    .template-game #email-page .title {
+      font-size: 5.6em;
+      width: 97%;
+      margin: auto;
+      font-family: "SubwayBold";
+      margin-top: 29%;
+      color: var(--main-green);
+      text-transform: inherit;
+      margin-bottom: 12px;
+      line-height: 1em; }
+    .template-game #email-page .sub-title {
+      font-size: 2.6em;
+      font-family: "SubwayBold";
+      color: var(--gray);
+      margin-bottom: 80px; }
+    .template-game #email-page .email-input-gp {
+      position: relative;
+      width: 69%;
+      margin: auto; }
+      .template-game #email-page .email-input-gp .email-field {
+        display: block;
+        margin: auto;
+        margin-bottom: 65px;
+        width: 100%;
+        padding-bottom: 3px;
+        font-size: 2.8em;
+        border: none;
+        background: none;
+        border-bottom: 9px solid #575757;
+        outline: none;
+        color: #575757;
+        font-family: "SubwayBold";
+        padding-right: 80px;
+        box-sizing: border-box; }
+      .template-game #email-page .email-input-gp .show-img-pic {
+        width: 60px;
+        height: 60px;
+        top: 0px;
+        position: absolute;
+        right: 0px; }
+    .template-game #email-page .submit-btn {
+      width: 37%; }
+    .template-game #email-page #pop-up {
+      width: 92%;
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+      display: none;
+      left: 50%; }
+    .template-game #email-page #keyboard {
+      position: relative;
+      font-size: 28px;
+      z-index: 1;
+      width: 87%;
+      margin: auto;
+      font-family: SubwayMedium; }
+      .template-game #email-page #keyboard .krows {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14px; }
+      .template-game #email-page #keyboard .krows span {
+        width: 69px;
+        background: white;
+        height: 65px;
+        text-align: center;
+        line-height: 65px;
+        border-radius: 2px;
+        box-shadow: 1px 2px 3px;
+        border-radius: 6px; }
+      .template-game #email-page #keyboard .atMail {
+        width: auto !important;
+        padding: 0px 23px !important; }
+      .template-game #email-page #keyboard #backSpace {
+        width: 97px;
+        display: flex;
+        justify-content: center; }
+      .template-game #email-page #keyboard #delete {
+        width: 54px; }
+      .template-game #email-page #keyboard #return {
+        width: 128px; }
+    .template-game #email-page .btn {
+      margin-top: 80px; }
+  .template-game #final-page .japanese-txt {
+    width: 100%;
+    position: absolute;
+    top: 37%;
+    transform: translateY(-50%); }
+  .template-game #final-page .play-again-btn {
+    position: absolute;
+    top: 56%;
+    left: 27%;
+    transform: translateX(-50%); }
+  .template-game #final-page .txt {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    top: 36%;
+    transform: translateY(-50%);
+    font-size: 103px;
+    font-family: "SubwaySuper";
+    color: var(--main-green);
+    width: 87%;
+    line-height: 1em; }
+  .template-game #final-page .today-txt {
+    top: 32.4%; }

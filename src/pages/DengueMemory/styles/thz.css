@@ -1,0 +1,45 @@
+#DengueMemory .thz {
+  display: flex;
+  flex-direction: column; }
+  #DengueMemory .thz .headTil {
+    text-align: center;
+    font-size: 8vw;
+    text-transform: uppercase;
+    padding-top: 4vw; }
+    #DengueMemory .thz .headTil span {
+      border-bottom: 2px solid black; }
+  #DengueMemory .thz .qrGp {
+    display: flex;
+    width: 86%;
+    margin: auto;
+    justify-content: space-around;
+    margin-top: 3vh; }
+  #DengueMemory .thz .qrGp-mobile {
+    justify-content: center; }
+  #DengueMemory .thz .gamePlay {
+    text-align: center;
+    display: flex;
+    margin: auto;
+    font-size: 7vw;
+    border-bottom: 1px solid black;
+    width: 86%;
+    margin-top: 6vh;
+    color: black;
+    justify-content: space-around;
+    padding-bottom: 1.5vh; }
+    #DengueMemory .thz .gamePlay sup {
+      font-size: 4vw; }
+    #DengueMemory .thz .gamePlay .sec,
+    #DengueMemory .thz .gamePlay .miliSec {
+      display: inline-block;
+      padding-top: 0; }
+    #DengueMemory .thz .gamePlay span {
+      color: #ff0000; }
+  #DengueMemory .thz .remindAgain {
+    font-size: 6vw;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1vh;
+    line-height: 1; }
+    #DengueMemory .thz .remindAgain span {
+      color: #ff0000; }

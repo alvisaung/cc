@@ -1,0 +1,257 @@
+.golfPlayingBG,
+.playGroundBGpic {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  width: 100%; }
+  .golfPlayingBG .truck,
+  .golfPlayingBG .truck2,
+  .golfPlayingBG .truck3,
+  .playGroundBGpic .truck,
+  .playGroundBGpic .truck2,
+  .playGroundBGpic .truck3 {
+    position: absolute;
+    top: 48%;
+    left: 32%;
+    width: 41%; }
+  .golfPlayingBG .truck2,
+  .golfPlayingBG .truck3,
+  .playGroundBGpic .truck2,
+  .playGroundBGpic .truck3 {
+    transform: scale(0); }
+  .golfPlayingBG .leftMeasure,
+  .golfPlayingBG .rightMeasure,
+  .playGroundBGpic .leftMeasure,
+  .playGroundBGpic .rightMeasure {
+    position: fixed;
+    bottom: 0px;
+    width: 35%;
+    display: none; }
+  .golfPlayingBG .leftMeasure,
+  .playGroundBGpic .leftMeasure {
+    left: 0px; }
+  .golfPlayingBG .rightMeasure,
+  .playGroundBGpic .rightMeasure {
+    right: 0px; }
+  .golfPlayingBG .label,
+  .playGroundBGpic .label {
+    font-size: 53px;
+    color: #b2adaa;
+    position: absolute;
+    top: 62%;
+    display: none;
+    transform: rotate3d(15, -5, 1, 0.1turn);
+    text-align: center;
+    width: 100%; }
+  .golfPlayingBG .tap,
+  .playGroundBGpic .tap {
+    width: 20%;
+    position: absolute;
+    left: 50%;
+    top: 26%;
+    transform: translateX(-50%); }
+  .golfPlayingBG .golf-tee,
+  .playGroundBGpic .golf-tee {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 35%;
+    height: initial;
+    position: absolute;
+    margin: auto;
+    position: fixed;
+    bottom: 0px;
+    right: 50%;
+    transform: translateX(50%); }
+    .golfPlayingBG .golf-tee .golf-ball,
+    .playGroundBGpic .golf-tee .golf-ball {
+      width: 100%;
+      margin-bottom: -6px; }
+    .golfPlayingBG .golf-tee .tee,
+    .playGroundBGpic .golf-tee .tee {
+      width: 26%;
+      margin: auto;
+      margin-top: 3px; }
+
+.mainBg {
+  background: url("https://assets.cc.ninetyfivegroup.com/images/hsbc-golf/allBG.png") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%; }
+
+.shareContributor,
+.snapShot {
+  text-align: center;
+  display: flex; }
+  .shareContributor .logo,
+  .snapShot .logo {
+    width: 29vw; }
+  .shareContributor .goBackHome,
+  .snapShot .goBackHome {
+    font-size: 45px;
+    font-family: Univers Next for HSBC;
+    font-weight: 900;
+    /* padding-top: 20px; */
+    background: red;
+    margin-top: 20px;
+    border: none;
+    padding: 20px;
+    border-radius: 10px; }
+  .shareContributor .makeCenter,
+  .snapShot .makeCenter {
+    margin: auto; }
+    .shareContributor .makeCenter .joinUs,
+    .snapShot .makeCenter .joinUs {
+      font-size: 8vw;
+      font-weight: bold;
+      font-family: Univers Next for HSBC;
+      line-height: 106%;
+      text-transform: capitalize; }
+    .shareContributor .makeCenter .middleGuy,
+    .snapShot .makeCenter .middleGuy {
+      margin-top: 60px;
+      margin-bottom: 60px; }
+      .shareContributor .makeCenter .middleGuy .btnPlayGolf,
+      .snapShot .makeCenter .middleGuy .btnPlayGolf {
+        width: 44vw; }
+    .shareContributor .makeCenter .thanks,
+    .snapShot .makeCenter .thanks {
+      font-size: 13vw;
+      font-family: Univers Next for HSBC; }
+    .shareContributor .makeCenter .joinUs,
+    .snapShot .makeCenter .joinUs {
+      text-transform: capitalize;
+      font-family: Univers Next for HSBC;
+      font-weight: bold; }
+    .shareContributor .makeCenter .des,
+    .snapShot .makeCenter .des {
+      font-size: 4vw;
+      font-family: Univers Next for HSBC; }
+    .shareContributor .makeCenter .button,
+    .snapShot .makeCenter .button {
+      margin-top: 20px; }
+      .shareContributor .makeCenter .button img,
+      .snapShot .makeCenter .button img {
+        width: 90%; }
+    .shareContributor .makeCenter .drive,
+    .snapShot .makeCenter .drive {
+      width: 82vw; }
+  .shareContributor .makeCircle,
+  .snapShot .makeCircle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin: auto; }
+    .shareContributor .makeCircle .frame,
+    .snapShot .makeCircle .frame {
+      margin-bottom: 10px;
+      width: 50vw;
+      border-radius: 96px;
+      height: 50vw;
+      border-radius: 50%;
+      object-fit: cover; }
+    .shareContributor .makeCircle .cameraIcon,
+    .snapShot .makeCircle .cameraIcon {
+      width: 26%;
+      margin-top: 12px; }
+    .shareContributor .makeCircle .snapShotTake,
+    .snapShot .makeCircle .snapShotTake {
+      width: 65%;
+      margin-top: 52px; }
+  .shareContributor .adjustBrightness,
+  .snapShot .adjustBrightness {
+    width: 20%;
+    position: fixed;
+    right: 0px;
+    margin: auto 0px;
+    display: flex;
+    height: 100%; }
+    .shareContributor .adjustBrightness .moreLight,
+    .snapShot .adjustBrightness .moreLight {
+      font-size: 7vw;
+      font-weight: bold;
+      width: 40%;
+      background: red;
+      border: none;
+      color: white; }
+    .shareContributor .adjustBrightness .leastLight,
+    .snapShot .adjustBrightness .leastLight {
+      font-size: 7vw;
+      font-weight: bold;
+      width: 40%;
+      background: red;
+      border: none;
+      color: white;
+      text-align: center;
+      /* height: 100px; */
+      padding: 0px; }
+    .shareContributor .adjustBrightness .bar,
+    .snapShot .adjustBrightness .bar {
+      width: 12%;
+      height: 170px;
+      background: black;
+      margin: 16px auto;
+      position: relative; }
+      .shareContributor .adjustBrightness .bar .choseBar,
+      .snapShot .adjustBrightness .bar .choseBar {
+        background-color: yellow;
+        width: 100%;
+        position: absolute;
+        bottom: 0px; }
+    .shareContributor .adjustBrightness .goCenter,
+    .snapShot .adjustBrightness .goCenter {
+      width: 100%;
+      margin: auto; }
+  .shareContributor .finalEnd,
+  .snapShot .finalEnd {
+    width: 60%; }
+    .shareContributor .finalEnd .thz,
+    .snapShot .finalEnd .thz {
+      width: 100%; }
+    .shareContributor .finalEnd .hwwLogo,
+    .snapShot .finalEnd .hwwLogo {
+      width: 40%;
+      margin-top: 40px; }
+  .shareContributor .snapShotFinalShare,
+  .snapShot .snapShotFinalShare {
+    width: 58%; }
+    .shareContributor .snapShotFinalShare .donateLabel,
+    .snapShot .snapShotFinalShare .donateLabel {
+      font-size: 5vw;
+      font-family: Univers Next for HSBC;
+      font-weight: bold; }
+    .shareContributor .snapShotFinalShare .snapShotBtn,
+    .snapShot .snapShotFinalShare .snapShotBtn {
+      width: 50%; }
+    .shareContributor .snapShotFinalShare .redTxt,
+    .snapShot .snapShotFinalShare .redTxt {
+      color: red; }
+
+.roadBg {
+  background: url("https://assets.cc.ninetyfivegroup.com/images/hsbc-golf/RoadBG.png") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-position: center; }
+  .roadBg .howToPlay {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 71%; }
+  .roadBg .roadRoad {
+    margin: auto;
+    padding-top: 20%;
+    width: 40%; }
+    .roadBg .roadRoad .startPlay {
+      width: 74%; }
+
+#redLightCanvas {
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  top: 90%;
+  background: url("https://assets.cc.ninetyfivegroup.com/images/hsbc-golf/bar.png") no-repeat;
+  background-size: contain; }
+
+.hide {
+  display: none; }

@@ -1,0 +1,107 @@
+$red: #da2026;
+
+@font-face {
+  font-family: SpeeDeeBold;
+  src: url(./fonts/speedee-bold.ttf);
+}
+
+#mcd-world-cup {
+  background: url(./images/main-bg.jpg) no-repeat center;
+  height: 100%;
+  span {
+    margin-right: -1px;
+    // display: inline-block;
+  }
+  .chicken-gp {
+    position: absolute;
+    top: 33.5%;
+    left: 4.5%;
+    .chicken {
+      font-size: 42px;
+      font-family: "SpeeDeeBold";
+      line-height: 1em;
+      letter-spacing: -1px;
+    }
+    img {
+      width: 327px;
+      margin-left: -4px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+  .frame-1-third {
+    font-size: 100px !important;
+    line-height: 0.98em !important;
+  }
+  .new-line {
+    display: block;
+  }
+  .frame-1-seventh {
+    font-size: 110px !important;
+  }
+  .frame-1-sixth {
+    font-size: 104px !important;
+    line-height: 0.9em !important;
+    letter-spacing: -6px !important;
+  }
+
+  .first-4 {
+    font-size: 108px !important;
+  }
+
+  // .first-1,
+
+  // .first-1-char,
+  .first-2-char,
+  .first-3-char,
+  .first-4-char,
+  .first-5-char,
+  .first-6-char,
+  .first-7-char {
+    visibility: hidden;
+  }
+  .frame-1-fourth {
+    font-size: 100px !important;
+  }
+  .frame-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 52.5%;
+    height: 611px;
+    display: flex;
+    align-items: center;
+  }
+  .first-frame-txt {
+    font-size: 99px;
+    position: absolute;
+    width: 74%;
+    letter-spacing: -2px;
+    font-family: SpeeDeeBold;
+    margin-left: 14%;
+    line-height: 0.95em;
+    .red {
+      color: $red;
+      letter-spacing: -2px;
+    }
+  }
+  .ball {
+    position: absolute;
+    top: 46%;
+    left: -7.2%;
+  }
+
+  .ball-animate {
+    animation: rotate 8s linear infinite;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

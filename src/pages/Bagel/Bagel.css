@@ -1,0 +1,118 @@
+@font-face {
+  font-family: SpeedeeBold;
+  src: url("./fonts/speedee-bold.ttf"); }
+
+.bagel {
+  background-image: url("./images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+  .bagel .shit-gp {
+    display: flex;
+    position: relative;
+    align-items: baseline; }
+    .bagel .shit-gp .time-gp {
+      padding-top: 0px;
+      line-height: 0.76em;
+      margin-top: 20%;
+      margin-right: 0px;
+      width: fit-content; }
+  .bagel .am-type {
+    font-family: "SpeedeeBold";
+    color: white;
+    font-size: 4.3em;
+    text-shadow: 8px 4px 10px #79b3d4;
+    flex-grow: 1;
+    line-height: 0.9em;
+    animation: blink 2s infinite; }
+  .bagel #text-2,
+  .bagel #text-3,
+  .bagel #text-4,
+  .bagel #text-5 {
+    scale: 0;
+    display: none; }
+  .bagel .creative-txt-gp {
+    margin-top: 100px;
+    color: #136396;
+    font-size: 49px;
+    font-family: "SpeedeeBold";
+    text-align: center;
+    line-height: 1.3em; }
+    .bagel .creative-txt-gp span {
+      background: red;
+      color: white;
+      padding: 0px 8px; }
+  .bagel .lock-up-img {
+    display: flex;
+    margin: auto;
+    margin-top: 80px; }
+  .bagel .time-gp {
+    font-size: 372px;
+    color: white;
+    text-align: center;
+    padding-top: 14%;
+    text-shadow: 10px 10px 16px #79b3d4;
+    font-family: SpeedeeBold;
+    line-height: 1.4em;
+    margin-left: 32%;
+    width: fit-content; }
+  .bagel .dot {
+    font-size: 341px;
+    color: white;
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 10px 10px 16px #79b3d4;
+    animation: blink 2s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  49% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+  .bagel .bagel-main {
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translateX(-50%); }
+  .bagel #bagel-main-1,
+  .bagel #bagel-main-2,
+  .bagel #bagel-main-3,
+  .bagel #bagel-main-4,
+  .bagel #bagel-main-5,
+  .bagel #bagel-main-6 {
+    width: 35vw;
+    position: absolute;
+    top: 0;
+    left: 100%; }
+  .bagel .float-burger {
+    position: absolute;
+    top: 0px;
+    width: 25vw; }
+  .bagel .left-btm {
+    top: 70%;
+    width: 35vw;
+    left: -14%; }
+  .bagel .left-top {
+    top: 12%;
+    width: 20vw;
+    left: -6%; }
+  .bagel .right-btm {
+    top: 63%;
+    left: 83%;
+    width: 28vw; }
+  .bagel .right-top {
+    top: 17%;
+    left: 81%;
+    width: 25vw; }
+  .bagel .center {
+    left: 50%;
+    top: 26%;
+    transform: translateX(-50%);
+    width: 34vw; }

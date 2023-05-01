@@ -1,0 +1,67 @@
+.title {
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+  font-size: 165px;
+  font-family: Dense;
+  color: #595856;
+}
+.sub_title {
+  margin-top: -10px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #595856;
+  margin-bottom: 35px;
+}
+.btn-memory {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 358px;
+  margin-top: 30px;
+}
+.challenge_txt {
+  margin-top: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 63px;
+  color: #595856;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+.gamestart_btn {
+  width: 80%;
+  background: transparent;
+  border: none;
+}
+
+.gamestart_btn img {
+  border: none;
+  width: 100%;
+  /* transform: translateX(-7px); */
+}
+.bounce {
+  -webkit-animation: bounce 0.75s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, 55px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.loopPressing {
+  transform: translateY(14px);
+  box-shadow: 0px 10px #666 !important;
+}
+
+video {
+  height: auto;
+  margin-bottom: 10px;
+}

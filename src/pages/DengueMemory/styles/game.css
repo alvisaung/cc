@@ -1,0 +1,180 @@
+#DengueMemory .gamePlay {
+  text-align: center;
+  display: flex;
+  margin: auto;
+  font-size: 14vw;
+  color: #ff0000;
+  border-bottom: 1px solid black;
+  width: 86%;
+  margin-top: 2vh;
+  justify-content: center; }
+  #DengueMemory .gamePlay .sec,
+  #DengueMemory .gamePlay .miliSec {
+    display: inline-block;
+    padding-top: 1.4vh; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    #DengueMemory .gamePlay {
+      font-size: 11vw;
+      margin-top: 0vh; } }
+
+#DengueMemory .testCon {
+  margin: auto;
+  margin-top: 0px;
+  width: 14vw;
+  height: 14vw; }
+
+#DengueMemory .confetti {
+  margin: auto;
+  margin-top: 0px;
+  width: 14vw;
+  height: 14vw;
+  display: none; }
+
+#DengueMemory .stopDengueTxt {
+  font-size: 9vw;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 3vh;
+  line-height: 1; }
+  #DengueMemory .stopDengueTxt span {
+    color: #ff0000; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    #DengueMemory .stopDengueTxt {
+      font-size: 6vw; } }
+
+#DengueMemory .unclickable {
+  pointer-events: none; }
+
+#DengueMemory .game .toNotice {
+  display: flex;
+  justify-content: space-between;
+  width: 82%;
+  margin: auto;
+  margin-top: 3vh; }
+
+#DengueMemory .break-pic,
+#DengueMemory .lift-pic,
+#DengueMemory .overturn-pic,
+#DengueMemory .change-pic,
+#DengueMemory .keep-pic,
+#DengueMemory .dengueFlip {
+  width: 14vw;
+  height: 14vw;
+  background-size: 14vw 14vw;
+  background-repeat: no-repeat;
+  image-rendering: smooth; }
+
+#DengueMemory .break-pic-2,
+#DengueMemory .lift-pic-2,
+#DengueMemory .overturn-pic-2,
+#DengueMemory .change-pic-2,
+#DengueMemory .keep-pic-2 {
+  background-size: contain;
+  background-position: center;
+  width: 14vw;
+  height: 14vw;
+  background-repeat: no-repeat;
+  opacity: 0; }
+
+#DengueMemory .break-pic {
+  background-image: url("../assets/images/break.png"); }
+
+#DengueMemory .break-pic-2 {
+  width: 10vw;
+  height: 10vw;
+  background-image: url("../assets/images/break-2.png"); }
+
+#DengueMemory .lift-pic {
+  background-image: url("../assets/images/lift.png"); }
+
+#DengueMemory .lift-pic-2 {
+  width: 10vw;
+  height: 10vw;
+  background-image: url("../assets/images/lift-2.png"); }
+
+#DengueMemory .overturn-pic {
+  background-image: url("../assets/images/overturn.png"); }
+
+#DengueMemory .overturn-pic-2 {
+  background-image: url("../assets/images/overturn-2.png"); }
+
+#DengueMemory .change-pic {
+  background-image: url("../assets/images/change.png"); }
+
+#DengueMemory .change-pic-2 {
+  width: 10vw;
+  height: 10vw;
+  background-image: url("../assets/images/change-2.png"); }
+
+#DengueMemory .keep-pic {
+  background-image: url("../assets/images/keep.png"); }
+
+#DengueMemory .keep-pic-2 {
+  background-image: url("../assets/images/keep-2.png"); }
+
+#DengueMemory .follow-find-pic,
+#DengueMemory .googleStore-pic,
+#DengueMemory .myEnv-pic,
+#DengueMemory .appStore-pic,
+#DengueMemory .company-pic {
+  width: 11vw;
+  height: 20vw;
+  background-size: 10vw;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+#DengueMemory .logo-collect-pic {
+  background-size: 60vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../assets/images/collection.png");
+  width: 60vw; }
+
+#DengueMemory .follow-find-pic {
+  background-image: url("../assets/images/follow_find.png"); }
+
+#DengueMemory .googleStore-pic {
+  background-image: url("../assets/images/googleStore.png"); }
+
+#DengueMemory .myEnv-pic {
+  background-image: url("../assets/images/myEnv.png");
+  background-size: 23vw;
+  width: 23vw;
+  background-position: center; }
+
+#DengueMemory .company-pic {
+  background-image: url("../assets/images/company.png");
+  width: 23vw;
+  background-size: 23vw; }
+
+#DengueMemory .appStore-pic {
+  background-image: url("../assets/images/appstore.png");
+  background-size: 9.5vw; }
+
+#DengueMemory .dengueFlip {
+  background-image: url("../assets/images/logo.png");
+  background-size: 14vw 14vw;
+  background-repeat: no-repeat;
+  image-rendering: smooth; }
+
+#DengueMemory .cardGp {
+  display: flex;
+  width: 88%;
+  margin: auto;
+  flex-wrap: wrap; }
+  #DengueMemory .cardGp .card {
+    background-color: white;
+    margin: 1vw;
+    padding: 1vw;
+    margin-left: 0.5vw;
+    box-shadow: 0px 0px 7px -2px #5e5e5e;
+    border: none;
+    width: 16vw;
+    height: 16vw;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #DengueMemory .cardGp .card .c {
+      position: absolute;
+      /* top: 0; */
+      margin: 0px; }

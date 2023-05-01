@@ -1,0 +1,28 @@
+.footer-grp {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 50px;
+  width: 89%;
+}
+.left-foot,
+.right-foot {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-up {
+  display: flex;
+  flex-direction: row;
+}
+
+.fb-icon {
+  width: 35px;
+  height: 35px;
+}
+.footer-grp img {
+  width: 100%;
+}

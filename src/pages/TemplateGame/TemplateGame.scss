@@ -1,0 +1,367 @@
+:root {
+  --main-green: #139144;
+  --gray: #4d4d4d;
+}
+@font-face {
+  font-family: SubwayBold;
+  src: url("./fonts/subway-sans-bold.otf");
+}
+@font-face {
+  font-family: SubwayMedium;
+  src: url("./fonts/subway-sans-medium.otf");
+}
+@font-face {
+  font-family: SubwaySuper;
+  src: url("./fonts/subway-sans-super.otf");
+}
+
+.template-game {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+
+  /**
+    .play-title-ref,
+  .templateRef,
+  .camRef, */
+
+  .playFrameRef,
+  .hee-yahh-anim-ref {
+    transform: scale(0);
+  }
+
+  .playFrameRef,
+  .playAgainFrameRef {
+    animation: bounce ease 1.2s infinite;
+  }
+  .playAgainFrameRef {
+  }
+  .hide {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    // scale: 0.8;
+
+    // rotate: 0;
+    // transform: rotate(0) scale(0.8, -0.8);
+  }
+  .btn {
+    font-family: SubwayBold;
+    font-size: 3.39em;
+    z-index: 111;
+    position: relative;
+    padding: 16px 0px;
+    width: 46%;
+    color: white;
+    background: var(--main-green);
+    border: none;
+    margin: auto;
+    border-radius: 20px;
+    height: auto;
+  }
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  #second-page,
+  #game-page,
+  #email-page,
+  #final-page,
+  #canvas {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .black {
+    color: black;
+  }
+  #first-page {
+    transition: all 1s ease-out;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    // text-align: center;
+    .bg {
+      position: absolute;
+    }
+    .txt {
+      position: absolute;
+      width: 80%;
+      z-index: 11;
+      top: 61%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+    .play-btn {
+      font-family: SubwayBold;
+      top: 78%;
+      left: 50%;
+    }
+    .first-page-btn-ref {
+      // transform: scale(1);
+      left: 28%;
+      top: 80%;
+      animation: bounce ease 1.2s infinite;
+    }
+  }
+  #second-page {
+    z-index: 111;
+    .text-gp {
+      text-align: center;
+      position: relative;
+      top: 47%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+    }
+    .header {
+      color: var(--main-green);
+      font-size: 3.4em;
+      font-family: "SubwayBold";
+      margin-bottom: 10px;
+    }
+    .second-page-desc {
+      font-size: 1.5em;
+      font-family: "SubwayMedium";
+      width: 80%;
+      margin: auto;
+      margin-bottom: 26px;
+      color: #4d4d4d;
+    }
+
+    .second-page-term {
+      font-size: 3.39em;
+      font-family: "SubwayBold";
+      width: 80%;
+      margin: auto;
+      margin-top: 30px;
+      color: var(--main-green);
+    }
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(-10%);
+    }
+
+    50% {
+      transform: translateY(20%);
+    }
+
+    100% {
+      transform: translateY(-10%);
+    }
+  }
+  #game-page {
+    text-align: center;
+    z-index: 111111;
+
+    #template {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #second-template-ref,
+    #third-template-ref {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .counter-header {
+      .how-to-play {
+        margin-top: 0px;
+        font-size: 6em;
+        top: 149px;
+        &::before {
+          content: "";
+          display: inline-block;
+        }
+      }
+
+      .play-desc {
+        margin-top: 247px;
+        font-size: 4.5em;
+      }
+    }
+
+    .how-to-play {
+      font-size: 5em;
+      font-family: "SubwayBold";
+      color: var(--main-green);
+      z-index: 111;
+      position: absolute;
+      margin: auto;
+      width: 100%;
+      margin-top: 126px;
+    }
+
+    .play-desc {
+      font-size: 3.2em;
+      width: 85%;
+      font-family: "SubwayBold";
+      color: var(--gray);
+      z-index: 111;
+      position: relative;
+      margin: auto;
+      margin-top: 218px;
+    }
+    .frame-goes-txt {
+      margin-top: 18px;
+    }
+
+    .play-btn {
+      margin-top: 107%;
+    }
+    img {
+      width: 100%;
+      height: 1920px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11;
+    }
+  }
+  #email-page {
+    z-index: 111;
+    text-align: center;
+
+    .title {
+      font-size: 5.6em;
+      width: 97%;
+      margin: auto;
+      font-family: "SubwayBold";
+
+      margin-top: 29%;
+      color: var(--main-green);
+      text-transform: inherit;
+      margin-bottom: 12px;
+      line-height: 1em;
+    }
+    .sub-title {
+      font-size: 2.6em;
+      font-family: "SubwayBold";
+      color: var(--gray);
+      margin-bottom: 80px;
+    }
+    .email-input-gp {
+      position: relative;
+      width: 69%;
+      margin: auto;
+      .email-field {
+        display: block;
+        margin: auto;
+        margin-bottom: 65px;
+        width: 100%;
+        padding-bottom: 3px;
+        font-size: 2.8em;
+        border: none;
+        background: none;
+        border-bottom: 9px solid #575757;
+        outline: none;
+        color: #575757;
+        font-family: "SubwayBold";
+        padding-right: 80px;
+        box-sizing: border-box;
+      }
+      .show-img-pic {
+        width: 60px;
+        height: 60px;
+        top: 0px;
+        position: absolute;
+        right: 0px;
+      }
+    }
+
+    .submit-btn {
+      width: 37%;
+    }
+    #pop-up {
+      width: 92%;
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+      display: none;
+      left: 50%;
+    }
+    #keyboard {
+      position: relative;
+      font-size: 28px;
+      z-index: 1;
+      width: 87%;
+      margin: auto;
+      font-family: SubwayMedium;
+
+      .krows {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14px;
+      }
+      .krows span {
+        width: 69px;
+        background: white;
+        height: 65px;
+
+        text-align: center;
+        line-height: 65px;
+        border-radius: 2px;
+        box-shadow: 1px 2px 3px;
+        border-radius: 6px;
+        // color: var(--main-green);
+      }
+      .atMail {
+        width: auto !important;
+        padding: 0px 23px !important;
+      }
+
+      #backSpace {
+        width: 97px;
+        display: flex;
+        justify-content: center;
+      }
+      #delete {
+        width: 54px;
+      }
+      #return {
+        width: 128px;
+      }
+    }
+    .btn {
+      margin-top: 80px;
+    }
+  }
+  #final-page {
+    .japanese-txt {
+      width: 100%;
+      position: absolute;
+      top: 37%;
+      transform: translateY(-50%);
+    }
+    .play-again-btn {
+      position: absolute;
+      top: 56%;
+      left: 27%;
+      transform: translateX(-50%);
+    }
+    .txt {
+      text-align: center;
+      position: relative;
+      margin: auto;
+      top: 36%;
+      transform: translateY(-50%);
+      font-size: 103px;
+      font-family: "SubwaySuper";
+      color: var(--main-green);
+      width: 87%;
+      line-height: 1em;
+    }
+    .today-txt {
+      top: 32.4%;
+    }
+  }
+}

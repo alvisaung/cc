@@ -1,0 +1,56 @@
+.side {
+  width: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.side img {
+  height: 100%;
+}
+.back {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+.left_card {
+  float: left;
+}
+.right_card {
+  float: right;
+}
+.matched .back img {
+  cursor: auto;
+  animation: 1s beat;
+  animation-delay: 1s;
+}
+.back_picture {
+  height: 100%;
+  width: 100%;
+}
+.back_pic {
+  height: 100%;
+  width: 100%;
+}
+.memory-game > .card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.65s ease-in-out;
+  transform-style: preserve-3d;
+}
+.card-container {
+  transition: transform 2s ease-in-out;
+  position: relative;
+  perspective: 600;
+  height: 218px;
+  width: 468px;
+  margin: 7px 6px;
+  display: inline-block;
+}
+.flipcard {
+  transform: rotateY(180deg);
+}
+.footer-grp {
+  margin-top: 184px !important;
+}

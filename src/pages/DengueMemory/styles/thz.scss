@@ -1,0 +1,58 @@
+#DengueMemory {
+  .thz {
+    display: flex;
+    flex-direction: column;
+    .headTil {
+      text-align: center;
+      font-size: 8vw;
+      text-transform: uppercase;
+      padding-top: 4vw;
+      span {
+        border-bottom: 2px solid black;
+      }
+    }
+    .qrGp {
+      display: flex;
+      width: 86%;
+      margin: auto;
+      justify-content: space-around;
+      margin-top: 3vh;
+    }
+    .qrGp-mobile {
+      justify-content: center;
+    }
+    .gamePlay {
+      text-align: center;
+      display: flex;
+      margin: auto;
+      font-size: 7vw;
+      border-bottom: 1px solid black;
+      width: 86%;
+      margin-top: 6vh;
+      color: black;
+      justify-content: space-around;
+      padding-bottom: 1.5vh;
+      sup {
+        font-size: 4vw;
+      }
+      .sec,
+      .miliSec {
+        display: inline-block;
+        padding-top: 0;
+      }
+      span {
+        color: #ff0000;
+      }
+    }
+    .remindAgain {
+      font-size: 6vw;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 1vh;
+      line-height: 1;
+      span {
+        color: #ff0000;
+      }
+    }
+  }
+}

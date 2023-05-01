@@ -1,0 +1,67 @@
+#LLAP {
+  background-image: url("./assets/bg.png");
+  background-size: contain;
+  background-repeat: no-repeat; }
+  #LLAP .panda {
+    position: absolute;
+    bottom: 0px; }
+  #LLAP .main-gp {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 51%; }
+    #LLAP .main-gp .main-pic {
+      width: 469px;
+      height: 469px;
+      object-fit: cover;
+      margin: 14px; }
+
+#LLAP-Admin .btn-gp {
+  display: flex;
+  justify-content: center;
+  margin: 40px 10px;
+  gap: 22px; }
+
+#LLAP-Admin .desc {
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 1.2em; }
+
+#LLAP-Admin .pic-end {
+  text-align: center;
+  font-size: 2em;
+  margin: 100px;
+  padding-bottom: 50px; }
+
+#LLAP-Admin .day-sec {
+  width: 90%;
+  margin: auto;
+  margin-top: 40px; }
+  #LLAP-Admin .day-sec .day-head {
+    font-size: 1.3em;
+    margin-bottom: 23px; }
+  #LLAP-Admin .day-sec .pic-gp {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px; }
+  #LLAP-Admin .day-sec .selected {
+    border: 2px solid red;
+    border-radius: 8px; }
+  #LLAP-Admin .day-sec .pic-row {
+    display: flex;
+    flex-direction: column;
+    width: 27%; }
+
+#LLAP-Admin .btn {
+  background: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 12px 30px;
+  font-size: calc(15px + 0.390625vw);
+  cursor: pointer; }
+  #LLAP-Admin .btn:hover {
+    background-color: lightgray; }

@@ -1,0 +1,122 @@
+.matchingComponent {
+  position: absolute;
+  top: 854px;
+  left: 96px;
+  /* width: 753px;
+  height: 753px; */
+  width: 758px;
+  height: 298px;
+  padding: 36px 70px;
+  z-index: 2;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.matchingFooter {
+  position: absolute;
+  top: 617px;
+  font-size: 26px;
+  font-weight: normal;
+  font-weight: 100;
+  font-family: sans-serif;
+  left: 92px;
+}
+.success_playAgain {
+  width: 210px;
+  margin: auto;
+  padding: 6px;
+  /* margin-top: -6px; */
+  background: white;
+  border-radius: 23px;
+  position: absolute;
+  left: 254px;
+  top: 157px;
+}
+.success_playAgain_btn {
+  width: 212px;
+  font-size: 51px;
+  position: relative;
+  background: #595856;
+  color: white;
+  border-radius: 22px;
+  font-family: Dense;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 7px;
+  border: none;
+}
+.attractive-prices {
+  margin-bottom: 10px;
+  color: #595856;
+  font-weight: bold;
+  font-size: 39px;
+}
+.fbIntIcon {
+  width: 107px;
+  position: relative;
+  top: 11px;
+  left: 15px;
+}
+.snapUs {
+  display: block;
+  font-size: 28px;
+}
+.matchingFooter span {
+  font-weight: bold;
+
+  color: #f8a935;
+  font-size: 38px;
+}
+.greatJobComponent {
+  left: 92px;
+  top: 568px;
+
+  height: 745px;
+}
+.matchTitle {
+  font-weight: bold;
+  font-family: Dense;
+  text-transform: uppercase;
+
+  position: relative;
+  top: -120px;
+  background: white;
+  border-radius: 47px;
+  padding: 10px;
+  width: 69%;
+  left: 116px;
+}
+
+.matchTitle button {
+  font-size: 118px;
+  outline: none;
+  width: 100%;
+  border: 1px solid black;
+  color: white;
+  background: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 20px;
+  font-family: Dense;
+  background: grey;
+  border: none;
+  border-radius: 45px;
+}
+.retryBtn {
+  position: absolute;
+  width: 200px;
+  top: 254px;
+  left: 353px;
+}
+.tryAgainFoot {
+  position: relative;
+  top: -60px;
+}
+.matchTitleGreatJob {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 9px;
+}

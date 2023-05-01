@@ -1,0 +1,204 @@
+.giftCatching .press-me {
+  position: absolute;
+  top: 790px;
+  left: 891px;
+  width: 180px;
+  height: 180px;
+  opacity: 0; }
+
+.giftCatching .controlWheel {
+  position: absolute;
+  top: 791px;
+  left: 885px; }
+
+.giftCatching .hide {
+  display: none; }
+
+.giftCatching .glitterGlow {
+  position: absolute;
+  top: 774px;
+  left: 871px;
+  width: 215px;
+  height: 224px;
+  background: white;
+  border-radius: 100px;
+  animation: glitterGlowControl 2s linear 0s infinite normal; }
+
+.giftCatching .pendingFinger {
+  left: 466px !important;
+  top: 768px !important;
+  width: 100px; }
+
+.giftCatching .playNow {
+  padding-left: 20px;
+  animation: none !important; }
+
+.giftCatching .BlueCover {
+  position: absolute;
+  top: 799px;
+  left: 116px; }
+
+.giftCatching .end-game-ballon {
+  position: absolute;
+  top: 160px; }
+
+.giftCatching .end-game-txt {
+  position: absolute;
+  top: 1318px;
+  left: 425px; }
+
+.giftCatching .end-game {
+  position: absolute;
+  top: 1183px;
+  left: 246px;
+  /* background: black; */
+  padding: 32px;
+  opacity: 0;
+  animation: glitterGlow 2s linear 0s infinite normal; }
+
+.giftCatching .endFrame {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0; }
+
+.giftCatching .appear {
+  opacity: 1 !important; }
+
+.giftCatching .finger {
+  width: 112px;
+  position: absolute;
+  top: 990px;
+  left: 923px;
+  animation: fingerSpot 1s linear 0s infinite normal; }
+
+.giftCatching .press-me-to-play {
+  position: absolute;
+  top: 661px;
+  left: 320px; }
+
+.giftCatching .bright {
+  animation: glitterFirstStart 2s linear 0s infinite normal;
+  top: 592px;
+  left: 256px; }
+
+.giftCatching .txt {
+  top: 696px;
+  left: 388px; }
+
+.giftCatching .overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.giftCatching .pending {
+  opacity: 1; }
+
+.giftCatching .start {
+  opacity: 0; }
+
+.giftCatching .glitterStar {
+  position: absolute;
+  top: 1255px;
+  left: 957px;
+  width: 100px;
+  height: 100px;
+  background: gold;
+  border-radius: 50px;
+  animation: glitter 2s linear 0s infinite normal; }
+
+.giftCatching .mask {
+  opacity: 0.3; }
+
+.giftCatching .controlTxt {
+  position: absolute;
+  top: 857px;
+  left: 927px; }
+
+.giftCatching .fade {
+  opacity: 0.4; }
+
+.giftCatching .firstPageGlow {
+  position: absolute;
+  top: 469px;
+  left: 326px;
+  height: 101px;
+  width: 422px;
+  background: black;
+  border-radius: 60px; }
+
+.giftCatching .playSanta {
+  position: absolute;
+  top: 276px;
+  left: 59px;
+  width: 977px; }
+
+@keyframes glitter {
+  0% {
+    -webkit-transform: scale(1.5);
+    opacity: 0.6; }
+  /* 25% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.3;
+  } */
+  50% {
+    -webkit-transform: scale(0.8);
+    opacity: 0.3; }
+  /* 75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+  } */
+  100% {
+    -webkit-transform: scale(1.5);
+    opacity: 0.6; } }
+
+@keyframes fingerSpot {
+  0% {
+    transform: translate(0px, 0px); }
+  50% {
+    transform: translate(0px, 30px); }
+  100% {
+    transform: translate(0px, 0px); } }
+
+@keyframes glitterFirstStart {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes glitterGlow {
+  0% {
+    opacity: 0; }
+  /* 25% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.3;
+  } */
+  50% {
+    opacity: 1; }
+  /* 75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+  } */
+  100% {
+    opacity: 0; } }
+
+@keyframes glitterGlowControl {
+  0% {
+    -webkit-transform: scale(1.1);
+    opacity: 0.5; }
+  /* 25% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.3;
+  } */
+  50% {
+    -webkit-transform: scale(0.6);
+    opacity: 0.8; }
+  /* 75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+  } */
+  100% {
+    -webkit-transform: scale(1.1);
+    opacity: 0.5; } }

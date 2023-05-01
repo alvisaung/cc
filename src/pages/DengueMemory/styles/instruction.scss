@@ -1,0 +1,125 @@
+#DengueMemory {
+  .howToPlay {
+    color: #ff0000;
+    font-size: 8vw;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 4vh;
+  }
+  button.btn.memo.ani-tap-1 {
+    margin-top: 7vh;
+  }
+  .ani-one {
+    text-align: center;
+  }
+  .card {
+    background-color: white;
+    margin: 1vw;
+    padding: 1vw;
+    margin-left: 0.5vw;
+    box-shadow: 0px 0px 7px -2px #5e5e5e;
+    border: none;
+    width: 16vw;
+    height: 16vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .c {
+      position: absolute;
+      /* top: 0; */
+      margin: 0px;
+    }
+  }
+  .memo {
+    letter-spacing: 1.5px;
+    border-radius: 2vw;
+    font-size: 6vw;
+    width: 47vw;
+    margin: 9vh auto auto;
+    padding: 0vw;
+    height: 10vw;
+    text-align: center;
+  }
+  .instruct {
+    font-size: 4.5vw;
+    text-align: center;
+    margin-top: 2.4vh;
+    letter-spacing: 0.1vw;
+    line-height: 1;
+    span {
+      color: #ff0000;
+    }
+  }
+  .toRemember {
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+    margin: auto;
+    margin-top: 1vh;
+    .instructPho {
+      width: 14vw;
+      height: 14vw;
+      margin: auto;
+    }
+    .instructDetail {
+      text-align: center;
+      margin-top: 0.7vh;
+      .instructTitle {
+        text-transform: uppercase;
+        font-size: 4vw;
+        border-bottom: 1px solid black;
+        span {
+          color: #ff0000;
+        }
+      }
+      .detail {
+        font-size: 2.1vw;
+        line-height: 1;
+        margin-top: 0.3vh;
+      }
+    }
+  }
+  .demo {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+    margin-top: 2vh;
+    .instructPho {
+      width: 14vw;
+      height: 14vw;
+      margin: auto;
+    }
+    .up {
+      margin-left: auto;
+      flex-direction: row;
+      display: flex;
+    }
+    .demoPic {
+      background-color: white;
+      margin: 1vw;
+      padding: 1vw;
+      display: flex;
+      margin-right: 0.5vw;
+      margin-left: 0.5vw;
+      box-shadow: 0px 0px 20px -2px rgba(94, 94, 94, 73%);
+    }
+    .down {
+      margin-right: auto;
+      flex-direction: row;
+      display: flex;
+    }
+  }
+  .tap-play {
+    margin-top: 2vh;
+    width: 32vw;
+    font-size: 4vw;
+    margin-top: 2vh;
+    height: 5vh;
+    line-height: normal;
+    img {
+      width: 1.5vw !important;
+      margin-left: 1.5vw;
+    }
+  }
+}

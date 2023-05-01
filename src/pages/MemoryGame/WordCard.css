@@ -1,0 +1,12 @@
+.pic_group {
+  display: flex;
+  justify-content: space-around;
+  width: 93%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+.pic_group img {
+  width: 210px;
+  height: 210px;
+}

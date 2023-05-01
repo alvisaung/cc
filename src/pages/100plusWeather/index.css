@@ -1,0 +1,15 @@
+.temp {
+  position: absolute;
+  top: 213px;
+  font-size: 266px;
+  font-family: digital-7;
+  color: white;
+  width: 100%;
+  left: 0px;
+  text-align: center;
+}
+.spin {
+  position: absolute;
+  top: 768px;
+  left: 455px;
+}
