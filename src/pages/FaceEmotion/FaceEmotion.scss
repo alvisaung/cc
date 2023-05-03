@@ -1,0 +1,14 @@
+.box {
+  width: 400px;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  height: 400px;
+  border: 2px solid red;
+  span {
+    background-color: white;
+    top: -10%;
+    position: relative;
+  }
+}
