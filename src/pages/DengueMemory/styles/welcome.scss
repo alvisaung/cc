@@ -1,20 +1,10 @@
 .gradient {
   background: rgb(96, 40, 14);
-  background: linear-gradient(
-    90deg,
-    rgba(96, 40, 14, 1) 0%,
-    rgba(243, 105, 31, 1) 22%,
-    rgba(243, 128, 26, 1) 43%,
-    rgba(241, 198, 9, 1) 99%
-  );
+  background: linear-gradient(90deg, rgba(96, 40, 14, 1) 0%, rgba(243, 105, 31, 1) 22%, rgba(243, 128, 26, 1) 43%, rgba(241, 198, 9, 1) 99%);
 }
-html,
-body {
+
+html {
   height: 100%;
-  #root,
-  #root > div {
-    height: 100%;
-  }
 }
 #DengueMemory {
   background-color: #e2e3e4;
@@ -65,12 +55,7 @@ body {
     top: 50%;
     font-size: 15vw;
     z-index: 16;
-    text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
-      1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
-      1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
-      1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
-      1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
-      1px 30px 60px rgba(16, 16, 16, 0.4);
+    text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
     color: #ff0000;
   }
   #overlay {

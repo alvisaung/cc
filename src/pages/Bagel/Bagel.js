@@ -5,7 +5,7 @@ import React from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import "./Bagel.css";
+import "./Bagel.scss";
 
 import Burger1 from "./images/burger-1.png";
 import Burger2 from "./images/burger-2.png";
@@ -240,7 +240,7 @@ const Bagel = () => {
   };
 
   return (
-    <div className="bagel">
+    <div id="bagel">
       <div className="time-gp" ref={widthRef}>
         {time.hr}
       </div>

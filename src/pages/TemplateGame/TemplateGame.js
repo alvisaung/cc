@@ -41,8 +41,6 @@ export default function TemplateGame() {
   const checkCloseRadioInterval = useRef(null);
   useEffect(() => {
     // nextPage("#first-page", "#final-page");
-    console.log("Update");
-
     setCurrPage("#first-page");
     checkCloseInterval();
     checkIsCameraEnable();

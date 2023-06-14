@@ -25,6 +25,8 @@ import Shake from "./pages/shaking/Shake";
 import CartoonGenerator from "pages/cartoonGenerator/CartoonGenerator";
 import FaceEmotion from "pages/FaceEmotion/FaceEmotion";
 import FaceSmileFilter from "pages/FaceSmileFilter/FaceSmileFilter";
+import PruDistance from "pages/PruDistance/PruDistance";
+import McdClock2 from "pages/MCD-2.0/McdClock2";
 
 function App() {
   return (
@@ -37,7 +39,7 @@ function App() {
       <Route path="/scb-yec" exact component={GiftCatching} />
       <Route path="/nets-bat" exact component={NetsBat} />
       <Route path="/wally-sally" exact component={WallySally} />
-      <Route path="/uniqlo" exact component={Uniqlo} />
+      <Route path="/uniqlo" exact render={() => <Uniqlo />} />
       <Route path="/dengue-memory-game" exact component={DengueMemory} />
       <Route path="/outsmart-weather" exact render={() => <OutSmartWeather />} />
       <Route path="/name-card" exact render={() => <NameCard />} />
@@ -51,6 +53,11 @@ function App() {
       <Route path="/cartoon" exact render={() => <CartoonGenerator />} />
       <Route path="/face-emo" exact render={() => <FaceEmotion />} />
       <Route path="/face-smile-filter" exact render={() => <FaceSmileFilter />} />
+      <Route path="/pru-distance" exact render={() => <PruDistance />} />
+      <Route path="/mcd-v2" exact render={() => <McdClock2 />} />
+      <Route path="/soccer" exact render={() => <McdWorldCup demo={true} />} />
+      <Route path="/igugc" exact render={() => <Llap demo={true} />} />
+      <Route path="/weather" exact render={() => <Uniqlo demo={true} />} />
     </Router>
   );
 }

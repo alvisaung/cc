@@ -1,5 +1,4 @@
 import React from "react";
-import "./McdWorldCup.css";
 import Ball from "./images/ball.png";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -7,9 +6,11 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import Spicy from "./images/spicy.png";
 import useWindowFocus from "use-window-focus";
+import "./McdWorldCup.scss";
+
 import { monthShortName, panelData, weekday, CharShowingTime, matchDataDefault, ApiCallInterval, matchDataList } from "./Data";
 
-export default function McdWorldCup() {
+export default function McdWorldCup({ demo }) {
   const [set, setSet] = useState("B");
   const hasAnim = useRef(true);
   const date = new Date(2022, 10, 25, 18);
@@ -55,7 +56,7 @@ export default function McdWorldCup() {
 
   const preRender = () => {
     const urlParams = new URLSearchParams(window.location.search);
-    let set_param = urlParams.get("set");
+    let set_param = urlParams.get("set") ?? "A";
     let panel_param = urlParams.get("panel");
     set_param = set_param.toUpperCase();
     console.log(set_param);
@@ -129,6 +130,7 @@ export default function McdWorldCup() {
     }
     idle_time_counter.current += 1;
   };
+
   const frameAnim = () => {
     const anim_ref_hide = first_frame_ref_gp[setA_anim_pointer.current];
     if (setA_anim_pointer.current == 14) {
@@ -150,20 +152,26 @@ export default function McdWorldCup() {
   const textSpliter = (text, animate_idx) => {
     let result = text.split("");
     return result.map((char, index) => (
-      <span key={index} className={`${animate_idx}`}>
+      <span key={index} className={`${animate_idx}`} style={{ color: demo ? "white" : "" }}>
         {char}
       </span>
     ));
   };
   return (
-    <div id="mcd-world-cup">
-      <img src={Ball} alt="Ball" className={`ball ${hasAnim.current && "ball-animate"}`} />
-      <div className="chicken-gp">
-        <img src={Spicy} alt="Spicy" />
-        <div className="chicken">
-          Hawaiian Grilled <br /> Chicken Burger
-        </div>
-      </div>
+    <div id="mcd-world-cup" style={{ background: demo ? "#282c34" : "" }}>
+      {demo && <img src={"./images/logo.png"} className="App-logo" alt="logo" />}
+      {demo && <div style={{ fontSize: 80, textAlign: "center", color: "white", top: 300, position: "absolute", width: "100%" }}>Clear Channel Demo page</div>}
+      {!demo && (
+        <>
+          <img src={Ball} alt="Ball" className={`ball ${hasAnim.current && "ball-animate"}`} />
+          <div className="chicken-gp">
+            <img src={Spicy} alt="Spicy" />
+            <div className="chicken">
+              Hawaiian Grilled <br /> Chicken Burger
+            </div>
+          </div>
+        </>
+      )}
 
       <div className="frame-wrapper">
         <div className="first-frame-txt first-1 ">

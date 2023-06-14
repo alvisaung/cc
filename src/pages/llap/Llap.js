@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Llap.css";
+import "./Llap.scss";
 import Panda from "./assets/panda.png";
 import Place1 from "./assets/placeholder_1.jpg";
 import Place2 from "./assets/placeholder_2.jpg";
@@ -13,7 +13,7 @@ import { useState } from "react";
 import api from "services/api";
 import { useRef } from "react";
 
-const Llap = () => {
+const Llap = ({ demo }) => {
   const [pic, setPic] = useState([]);
   const placeholder_list = [Place1, Place2, Place3, Place4, Place5, Place6, Place7];
   const [place_holder, setPlaceHolder] = useState([]);
@@ -44,6 +44,7 @@ const Llap = () => {
     }
     setPlaceHolder(rand_id);
   };
+
   window.BroadSignPlay = () => {
     fetchPic();
   };
@@ -65,8 +66,9 @@ const Llap = () => {
     } catch (e) {}
   };
   return (
-    <div id="LLAP">
-      <img src={Panda} alt={"panda"} className="panda" />
+    <div id="LLAP" style={{ background: demo ? "#282c34" : "" }}>
+      {demo && <div style={{ fontSize: 80, textAlign: "center", color: "white", top: 200, position: "absolute", width: "100%" }}>Clear Channel Demo page</div>}
+      {!demo && <img src={Panda} alt={"panda"} className="panda" />}
       <div className="main-gp">
         {pic.length > 0
           ? pic.map((p) => (

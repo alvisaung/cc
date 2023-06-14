@@ -44,7 +44,7 @@ const FaceEmotion = () => {
         const expression_list = expressions.asSortedArray();
         const { expression, probability } = expression_list[0];
         const { x, y, width, height } = alignedRect.box;
-        const replace = { x, y, width, height, expression: expression, percent: probability.toFixed(2) };
+        const replace = { x, y: y + 50, width, height, expression: expression, percent: probability.toFixed(2) };
         setRectLoc(replace);
       }
 
@@ -68,7 +68,7 @@ const FaceEmotion = () => {
 
   return (
     <div>
-      <div> AI FACE DETECTION</div>
+      <h1> AI FACE DETECTION</h1>
 
       <h1 style={{ display: loading_model ? "block" : "none" }}>Loading Model...</h1>
       <div style={{ display: loading_model ? "none" : "block" }}>

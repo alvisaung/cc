@@ -40,7 +40,7 @@
   width: 100%;
   /* transform: translateX(-7px); */
 }
-.bounce {
+.memory-game > .bounce {
   -webkit-animation: bounce 0.75s infinite;
 }
 @keyframes bounce {

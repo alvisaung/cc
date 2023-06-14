@@ -1,13 +1,45 @@
 import React, { useEffect, useRef, useState } from "react";
+import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import styled from "styled-components";
 
 export default function Vdo() {
   const [volume, setVolume] = useState(0);
+  // const [listening, setListening] = useState(false);
+  const [start, setStart] = useState(false);
   const leaderboard = useRef([]);
   const shoutStart = useRef(null);
+  const { transcript, listening, resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition();
   let max_v = 0;
 
+  const [success, setSuccess] = useState(null);
+  const to_found = ["clear channel", "friday", "outdoor", "open sesame", "opensesame"];
+  const containsWordFromArray = (word) => {
+    word = word.trim().toLowerCase();
+    for (let i = 0; i < to_found.length; i++) {
+      if (word.includes(to_found[i])) {
+        return true;
+      }
+    }
+    return false;
+  };
+  const recognizeVoice = () => {
+    setStart(true);
+
+    SpeechRecognition.startListening();
+    console.log("???");
+    if (containsWordFromArray(transcript)) {
+      setSuccess(`Success`);
+    } else {
+      setSuccess(null);
+    }
+  };
+
   useEffect(() => {
+    if (!transcript) return;
+    console.log(transcript);
+  }, [transcript]);
+
+  const detectVoice = () => {
     let stream, audioContext, analyser, dataArray, updateVolumeInterval;
 
     const handleStream = async () => {
@@ -57,34 +89,44 @@ export default function Vdo() {
         stream.getTracks().forEach((track) => track.stop());
       }
     };
-  }, []);
+  };
+
+  if (!browserSupportsSpeechRecognition) {
+    return <h1>Browser doesn't support speech recognition.</h1>;
+  }
+
   return (
     <SoundMeterContainer>
-      <Leaderboard>
-        <Title>Leaderboard</Title>
-        {leaderboard.current.length > 0 ? (
-          leaderboard.current.map((entry, index) => (
-            <LeaderboardEntry key={index}>
-              <div>
-                <strong>{entry.volume}%</strong> for <strong>{entry.time}s</strong>
-              </div>
-            </LeaderboardEntry>
-          ))
-        ) : (
-          <p>No entries yet</p>
+      <h3>Try say the following words</h3>
+      <div style={{ marginBottom: 20, fontSize: 18 }}>
+        <li>Friday</li>
+        <li>Outdoor</li>
+        <li>Clear Channel</li>
+        <li>Open Sesame</li>
+      </div>
+      <VolumeContainer style={{ background: start ? (success ? "aliceblue" : "orange") : "" }}>
+        {start && <Title>{listening ? <div>Say something...</div> : success ? success : "Wrong!"}</Title>}
+
+        {!listening && (
+          <Button onClick={recognizeVoice} style={{ fontSize: 20 }}>
+            Click to start recognition
+          </Button>
         )}
-      </Leaderboard>
-      <VolumeContainer>
-        <Title>Your Volume</Title>
-        <Subtitle>How loud can you shout?</Subtitle>
-        <VolumeLevel>{volume}</VolumeLevel>
+        {/* <Subtitle>How loud can you shout?</Subtitle> */}
+        {/* <VolumeLevel>{volume}</VolumeLevel>
         <VolumeBar style={{ width: `${volume}%` }}>
           <div></div>
-        </VolumeBar>
+        </VolumeBar> */}
       </VolumeContainer>
     </SoundMeterContainer>
   );
 }
+const Button = styled.button`
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+`;
+
 const LeaderboardEntry = styled.div`
   display: flex;
   justify-content: space-between;
@@ -134,11 +176,13 @@ const VolumeContainer = styled.div`
   padding: 30px;
   border-radius: 10px;
   text-align: center;
+  width: 80%;
 `;
 
-const Title = styled.h1`
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+const Title = styled.div`
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: bold;
 `;
 
 const Subtitle = styled.h2`

@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import './uniqlo.css';
-import footer from './img/footer.jpg';
-import header from './img/header.jpg';
-import high_1 from './img/high-1.jpg';
-import high_2 from './img/high-2.jpg';
-import low_1 from './img/low-1.jpg';
-import low_2 from './img/low-2.jpg';
-import mod_1 from './img/mod-1.jpg';
-import mod_2 from './img/mod-2.jpg';
-import veryHigh from './img/very-high.jpg';
-import { TweenLite } from 'gsap';
+import React, { Component } from "react";
+import "./uniqlo.css";
+import footer from "./img/footer.jpg";
+import header from "./img/header.jpg";
+import high_1 from "./img/high-1.jpg";
+import high_2 from "./img/high-2.jpg";
+import low_1 from "./img/low-1.jpg";
+import low_2 from "./img/low-2.jpg";
+import mod_1 from "./img/mod-1.jpg";
+import mod_2 from "./img/mod-2.jpg";
+import veryHigh from "./img/very-high.jpg";
+import { TweenLite } from "gsap";
 
 class Uniqlo extends Component {
-  key = '4td2CjWPXL3YI9KXVcWVCZICaAgA2Cov';
+  key = "4td2CjWPXL3YI9KXVcWVCZICaAgA2Cov";
   flipSame = 0;
   state = {
     areas: {
@@ -73,7 +73,7 @@ class Uniqlo extends Component {
       { panelId: 8975, loc: 300562 },
       { panelId: 9936, loc: 300574 },
       { panelId: 8967, loc: 1603383 },
-      { panelId: 'demo', loc: 300597 },
+      { panelId: "demo", loc: 300597 },
       { panelId: 10125, loc: 1603568 },
       { panelId: 5960, loc: 300548 },
       { panelId: 8973, loc: 300569 },
@@ -87,26 +87,28 @@ class Uniqlo extends Component {
       { panelId: 9835, loc: 300597 },
     ],
     currUV: 5,
+    currTemp: 0,
   };
+
   componentDidMount = () => {
     let hr = 1000 * 60 * 15;
     console.log(this.state.panels.length);
-    if (typeof window.BroadsignPlay !== 'undefined') {
+    if (typeof window.BroadsignPlay !== "undefined") {
       window.BroadsignPlay();
     }
     const urlParams = new URLSearchParams(window.location.search);
-    let panel = urlParams.get('panel');
+    let panel = urlParams.get("panel");
     setInterval(() => {
-      this.fetchWeather(panel, 'every');
+      this.fetchWeather(panel, "every");
     }, hr);
 
-    this.fetchWeather(panel, 'once');
+    this.fetchWeather(panel, "once");
   };
 
   fetchWeather = (panel, time) => {
     const areas = this.state.panels;
-    console.log('PANEL=>', panel);
-    let loc = '';
+    console.log("PANEL=>", panel);
+    let loc = "";
     for (let i = 0; i < areas.length; i++) {
       const e = areas[i];
       if (e.panelId == panel) {
@@ -114,18 +116,15 @@ class Uniqlo extends Component {
         break;
       }
     }
-
-    if (loc == '') {
-      alert('Panel ID is wrong!');
+    if (loc == "") {
+      alert("Panel ID is wrong!");
     } else {
-      console.log('FEtch', loc);
-      fetch(
-        `https://dataservice.accuweather.com/currentconditions/v1/${loc}?apikey=${this.key}&details=true`
-      )
+      console.log("FEtch", loc);
+      fetch(`https://dataservice.accuweather.com/currentconditions/v1/${loc}?apikey=${this.key}&details=true`)
         .then((res) => res.json())
         .then((data) =>
-          this.setState({ currUV: data[0].UVIndex }, () => {
-            if (time == 'once') {
+          this.setState({ currUV: data[0].UVIndex, currTemp: data[0].ApparentTemperature?.Metric?.Value }, () => {
+            if (time == "once") {
               this.changeImg();
             }
           })
@@ -136,15 +135,11 @@ class Uniqlo extends Component {
   getAdministrativeArea = () => {
     for (let i = 0; i < this.state.panels.length; i++) {
       const e = this.state.panels[i];
-      let lat_long = e.long_lat.split(',').reverse().join(', ');
+      let lat_long = e.long_lat.split(",").reverse().join(", ");
 
-      fetch(
-        `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${this.key}&q=${lat_long}`
-      )
+      fetch(`http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${this.key}&q=${lat_long}`)
         .then((res) => res.json())
-        .then((data) =>
-          console.log(`Panel-ID-> ${e.panelId}, Location-ID -> `, data.Key)
-        )
+        .then((data) => console.log(`Panel-ID-> ${e.panelId}, Location-ID -> `, data.Key))
         .catch((err) => console.log(err));
     }
   };
@@ -152,33 +147,19 @@ class Uniqlo extends Component {
     let toShow = [];
     let toDis = [];
     const { currUV } = this.state;
-    console.log('Curr UV', currUV);
+    console.log("Curr UV", currUV);
     if (currUV == 0 || currUV == 1 || currUV == 2) {
-      toShow = ['#low_1', '#low_2'];
-      toDis = [
-        '#low_2',
-        '#mod_1',
-        '#mod_2',
-        '#high_1',
-        '#high_2',
-        '#very_high ',
-      ];
+      toShow = ["#low_1", "#low_2"];
+      toDis = ["#low_2", "#mod_1", "#mod_2", "#high_1", "#high_2", "#very_high "];
     } else if (currUV >= 3 && currUV <= 5) {
-      toShow = ['#mod_1', '#mod_2'];
-      toDis = [
-        '#mod_2',
-        '#low_1',
-        '#low_2',
-        '#high_1',
-        '#high_2',
-        '#very_high ',
-      ];
+      toShow = ["#mod_1", "#mod_2"];
+      toDis = ["#mod_2", "#low_1", "#low_2", "#high_1", "#high_2", "#very_high "];
     } else if (currUV >= 6 && currUV <= 7) {
-      toShow = ['#high_1', '#high_2'];
-      toDis = ['#low_1', '#low_2', '#mod_1', '#mod_2', '#very_high '];
+      toShow = ["#high_1", "#high_2"];
+      toDis = ["#low_1", "#low_2", "#mod_1", "#mod_2", "#very_high "];
     } else {
-      toShow = ['#very_high'];
-      toDis = ['#low_1', '#low_2', '#mod_1', '#mod_2', '#high_1', '#high_2'];
+      toShow = ["#very_high"];
+      toDis = ["#low_1", "#low_2", "#mod_1", "#mod_2", "#high_1", "#high_2"];
     }
     return [toShow, toDis];
   };
@@ -188,11 +169,11 @@ class Uniqlo extends Component {
     let toDis = val[1];
     TweenLite.to(toDis, 0.4, {
       autoAlpha: 0,
-      display: 'none',
+      display: "none",
     });
     TweenLite.to(toShow[0], 1, {
       autoAlpha: 1,
-      display: 'block',
+      display: "block",
     }).delay(0.2);
 
     if (toShow[1]) {
@@ -203,7 +184,7 @@ class Uniqlo extends Component {
         let toDis = val[1];
         TweenLite.to(toDis, 0.4, {
           autoAlpha: 0,
-          display: 'none',
+          display: "none",
         });
 
         if (zero_show) {
@@ -221,45 +202,55 @@ class Uniqlo extends Component {
       if (zero_show == true) {
         TweenLite.to(toShow[0], 0.4, {
           autoAlpha: 0,
-          display: 'none',
+          display: "none",
         });
         TweenLite.to(toShow[1], 1, {
           autoAlpha: 1,
-          display: 'block',
+          display: "block",
         }).delay(0);
       } else {
         TweenLite.to(toShow[1], 0.4, {
           autoAlpha: 0,
-          display: 'none',
+          display: "none",
         });
         TweenLite.to(toShow[0], 1, {
           autoAlpha: 1,
-          display: 'block',
+          display: "block",
         }).delay(0);
       }
     } else {
       TweenLite.to(toShow[0], 1, {
         autoAlpha: 1,
-        display: 'block',
+        display: "block",
       });
     }
   };
+
   render() {
+    const { demo } = this.props;
     return (
-      <div>
-        <img src={header} alt="" id="header" className="model" />
-        <img src={low_1} alt="" id="low_1" className="model" />
-        <img src={low_2} alt="" id="low_2" className="model" />
-        <img src={mod_1} alt="" id="mod_1" className="model" />
-        <img src={mod_2} alt="" id="mod_2" className="model" />
-        <img src={high_1} alt="" id="high_1" className="model" />
-        <img src={high_2} alt="" id="high_2" className="model" />
-        <img src={veryHigh} alt="" id="very_high" className="model" />
-        <img src={footer} alt="" id="footer" className="model" />
+      <div style={{ background: demo ? "#282c34" : "" }}>
+        {demo && <div style={{ fontSize: 80, textAlign: "center", color: "white", top: 200, position: "absolute", width: "100%" }}>Clear Channel Demo page</div>}
+        {demo && <div style={{ fontSize: 60, textAlign: "center", color: "white", top: 400, position: "absolute", width: "100%" }}>{`Current UV Index ${this.state.currUV}`}</div>}
+        {demo && <div style={{ fontSize: 60, textAlign: "center", color: "white", top: 500, position: "absolute", width: "100%" }}>{`Current Temp Index ${this.state.currTemp}`}</div>}
+
+        {!demo && (
+          <>
+            <img src={header} alt="" id="header" className="model" />
+            <img src={low_1} alt="" id="low_1" className="model" />
+            <img src={low_2} alt="" id="low_2" className="model" />
+            <img src={mod_1} alt="" id="mod_1" className="model" />
+            <img src={mod_2} alt="" id="mod_2" className="model" />
+            <img src={high_1} alt="" id="high_1" className="model" />
+            <img src={high_2} alt="" id="high_2" className="model" />
+            <img src={veryHigh} alt="" id="very_high" className="model" />
+            <img src={footer} alt="" id="footer" className="model" />
+          </>
+        )}
       </div>
     );
   }
 }
-const img_url = 'https://assets.cc.quanterdynamic.com/images/uniqlo';
+const img_url = "https://assets.cc.quanterdynamic.com/images/uniqlo";
 
 export default Uniqlo;

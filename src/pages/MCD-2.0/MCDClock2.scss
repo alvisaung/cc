@@ -1,0 +1,131 @@
+@font-face {
+  font-family: FranxurterBold;
+  src: url("./FranxurterTotallyFat.ttf");
+}
+
+@font-face {
+  font-family: FranxurterMedium;
+  src: url("./FranxurterTotallyMedium.ttf");
+}
+
+#McdClock2 {
+  overflow: hidden;
+  background-image: url("./img/bg.png");
+
+  .humanbounce {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+    // display: none;
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .human {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .logo {
+    position: absolute;
+    right: 30px;
+    bottom: 28px;
+    z-index: 11;
+  }
+  .feel-the {
+    position: absolute;
+    left: 12%;
+    top: 3%;
+    z-index: 11;
+    .the {
+      position: relative;
+      left: 6px;
+      width: 138px;
+      top: 37px;
+    }
+  }
+  .bounce {
+    position: absolute;
+    top: 164px;
+    // height: inherit;
+    width: 100%;
+    z-index: 11;
+  }
+  .bounce-char {
+    position: absolute;
+    transform: scale(1);
+    font-family: "FranxurterBold";
+    color: white;
+    font-size: 12.2em;
+  }
+
+  .clock {
+    z-index: 11;
+    position: absolute;
+    top: 21.5%;
+    font-size: 24em;
+    font-family: "FranxurterBold";
+    color: white;
+    left: 6%;
+    display: flex;
+    line-height: 0.7em;
+    align-items: center;
+    flex-direction: column;
+    // animation: blink 2s infinite;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    19% {
+      opacity: 0;
+    }
+    20% {
+      // display: block;
+      opacity: 1;
+    }
+  }
+  .wave-gp {
+    position: absolute;
+    left: 16.2%;
+    margin-top: 10.1%;
+    .wave {
+      width: 80px;
+      margin-left: 14px;
+    }
+    .bagel {
+      position: absolute;
+      left: -14px;
+      top: -122px;
+    }
+  }
+  .b-char {
+    left: 0.4em;
+    transform: rotateZ(-16deg);
+  }
+
+  .u-char {
+    left: 1.5em;
+    transform: rotateZ(16deg);
+  }
+  .n-char {
+    left: 2em;
+    top: -30px;
+    transform: rotate(-8deg);
+  }
+  .c-char {
+    left: 2.5em;
+    top: 15px;
+    transform: rotateZ(-9deg);
+  }
+  .e-char {
+    left: 3.05em;
+    top: -18px;
+    transform: rotateZ(47deg);
+  }
+}

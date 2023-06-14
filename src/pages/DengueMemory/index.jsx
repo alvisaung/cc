@@ -4,7 +4,7 @@ import axios from "axios";
 
 import Welcome from "./Pages/Welcome";
 import Instructions from "./Pages/Instruction";
-import "./styles/welcome.css";
+import "./styles/welcome.scss";
 import api from "services/api";
 
 // Im
