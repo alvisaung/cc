@@ -170,10 +170,10 @@ const McdClock2 = () => {
       if (counter.current % 5 == 0 && facing == "pf") {
         startBounce();
       }
-      if (counter.current % 25 == 0 && videoRef.current && facing == "pf") {
+      // counter.current % 20 == 0 && videoRef.current
+      if (facing == "pf") {
         handleVdo();
       }
-
       counter.current = (counter.current + 1) % 60;
     }, 1000);
   };

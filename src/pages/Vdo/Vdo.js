@@ -12,7 +12,7 @@ export default function Vdo() {
   let max_v = 0;
 
   const [success, setSuccess] = useState(null);
-  const to_found = ["clear channel", "friday", "outdoor", "open sesame", "opensesame"];
+  const to_found = ["clear channel", "friday", "outdoor", "open sesame", "opensesame", "yes", "yeah"];
   const containsWordFromArray = (word) => {
     word = word.trim().toLowerCase();
     for (let i = 0; i < to_found.length; i++) {
@@ -26,17 +26,16 @@ export default function Vdo() {
     setStart(true);
 
     SpeechRecognition.startListening();
-    console.log("???");
-    if (containsWordFromArray(transcript)) {
-      setSuccess(`Success`);
-    } else {
-      setSuccess(null);
-    }
   };
 
   useEffect(() => {
     if (!transcript) return;
     console.log(transcript);
+    if (containsWordFromArray(transcript)) {
+      setSuccess(`Success`);
+    } else {
+      setSuccess(null);
+    }
   }, [transcript]);
 
   const detectVoice = () => {
@@ -103,6 +102,7 @@ export default function Vdo() {
         <li>Outdoor</li>
         <li>Clear Channel</li>
         <li>Open Sesame</li>
+        <li>YAASSSS</li>
       </div>
       <VolumeContainer style={{ background: start ? (success ? "aliceblue" : "orange") : "" }}>
         {start && <Title>{listening ? <div>Say something...</div> : success ? success : "Wrong!"}</Title>}

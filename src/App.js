@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Link, Redirect, withRouter, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Kaplan from "./pages/Kaplan/Kaplan";
 import Accelerometer from "./pages/Accelerometer/Accelerometer";
 import MemoryGame from "./pages/MemoryGame/MemoryGame";
-import Weather from "./pages/100plusWeather";
 import GiftCatching from "./pages/GiftCatching/GiftCatching";
 import NetsBat from "./pages/NetsBat/NetsBat";
 import WallySally from "./pages/WallySally/WallySally";
@@ -63,9 +62,3 @@ function App() {
 }
 
 export default App;
-
-/* <div>
-     
-      </div> */
-
-// </Router>
