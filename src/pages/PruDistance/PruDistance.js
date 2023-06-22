@@ -1,35 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./PruDistance.scss";
-import Near1 from "./imgs/500m-1.jpg";
-import Near2 from "./imgs/500m-2.jpg";
-import Near3 from "./imgs/500m-3.jpg";
+import Near1 from "./imgs/500m-1.png";
+import Near2 from "./imgs/500m-2.png";
+import Near3 from "./imgs/500m-3.png";
 import Away1 from "./imgs/away-1.jpg";
 import Away2 from "./imgs/away-2.jpg";
-import Away3 from "./imgs/away-3.jpg";
+import Away3 from "./imgs/away-3.png";
 import { gsap } from "gsap";
 
-const nearPanelDist = [
-  {
-    id: 10448,
-    distance: 162,
-  },
-  {
-    id: 9490,
-    distance: 270,
-  },
-  {
-    id: 8877,
-    distance: 307,
-  },
-  {
-    id: 9144,
-    distance: 438,
-  },
-  {
-    id: 9445,
-    distance: 496,
-  },
-];
 const nearDistance = [162, 270, 307, 438, 496];
 
 const PruDistance = () => {
@@ -44,9 +22,9 @@ const PruDistance = () => {
     const urlParams = new URLSearchParams(window.location.search);
     let distance = urlParams.get("distance");
     const is_near = nearDistance.includes(parseInt(distance));
+
     setDistance(distance);
     setNear(is_near);
-
     startRotate(is_near);
 
     return () => {

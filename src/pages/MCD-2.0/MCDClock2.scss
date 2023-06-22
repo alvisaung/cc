@@ -42,6 +42,50 @@
     left: 12%;
     top: 3%;
     z-index: 11;
+    span {
+      color: white;
+      font-size: 95px;
+      position: absolute;
+      font-family: "FranxurterMedium";
+    }
+    .f {
+      left: 13px;
+      transform: rotate(-21deg);
+    }
+    .e-1 {
+      left: 53px;
+      top: -8px;
+      transform: rotate(-21deg);
+    }
+    .e-2 {
+      left: 100px;
+      top: -6px;
+      transform: rotate(5deg);
+    }
+    .l {
+      left: 147px;
+      top: -1px;
+      transform: rotate(16deg);
+    }
+    .t {
+      left: 188px;
+      top: 17px;
+      transform: rotate(27deg);
+      font-size: 100px;
+    }
+    .h {
+      left: 223px;
+      top: 33px;
+      transform: rotate(13deg);
+      font-size: 100px;
+    }
+    .e-3 {
+      left: 269px;
+      top: 37px;
+      transform: rotate(-4deg);
+      font-size: 100px;
+    }
+
     .the {
       position: relative;
       left: 6px;
@@ -94,9 +138,28 @@
     position: absolute;
     left: 16.2%;
     margin-top: 10.1%;
+    .wave-container {
+      position: relative;
+      // overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .wave {
-      width: 80px;
+      // width: 80px;
       margin-left: 14px;
+      margin-top: 4px;
+      // visibility: hidden;
+    }
+    .wave3 {
+      width: 80px;
+    }
+    .wave2 {
+      width: 60px;
+      margin-top: 1px;
+    }
+    .wave1 {
+      width: 45px;
     }
     .bagel {
       position: absolute;

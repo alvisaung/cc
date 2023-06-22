@@ -27,6 +27,9 @@ export default function Vdo() {
 
     SpeechRecognition.startListening();
   };
+  useEffect(() => {
+    detectVoice();
+  }, []);
 
   useEffect(() => {
     if (!transcript) return;
@@ -112,11 +115,11 @@ export default function Vdo() {
             Click to start recognition
           </Button>
         )}
-        {/* <Subtitle>How loud can you shout?</Subtitle> */}
-        {/* <VolumeLevel>{volume}</VolumeLevel>
+        <Subtitle>How loud can you shout?</Subtitle>
+        <VolumeLevel>{volume}</VolumeLevel>
         <VolumeBar style={{ width: `${volume}%` }}>
           <div></div>
-        </VolumeBar> */}
+        </VolumeBar>
       </VolumeContainer>
     </SoundMeterContainer>
   );
@@ -186,7 +189,8 @@ const Title = styled.div`
 `;
 
 const Subtitle = styled.h2`
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-top: 30px;
   margin-bottom: 20px;
   color: #666;
 `;
