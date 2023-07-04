@@ -81,6 +81,7 @@ const McdClock2 = () => {
   window.BroadSignPlay = () => {
     handleFocus();
   };
+
   const handleFocus = () => {
     // reset vdo
     console.log("FOcus");
@@ -196,10 +197,15 @@ const McdClock2 = () => {
     const urlParams = new URLSearchParams(window.location.search);
     let facing = urlParams.get("facing");
     facing = facing ? facing.toLocaleLowerCase() : "pf";
-    startBounceTimeOut.current = setTimeout(() => {
-      startBounce();
-      handleVdo();
-    }, 1500);
+
+    if (facing == "pf") {
+      startBounceTimeOut.current = setTimeout(() => {
+        startBounce();
+        handleVdo();
+      }, 1500);
+    } else {
+      videoRef.current.currentTime = 10;
+    }
 
     timeRef.current = setInterval(() => {
       updateTime();
