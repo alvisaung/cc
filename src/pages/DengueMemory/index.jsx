@@ -17,7 +17,7 @@ import bgSound from "./assets/sounds/happy.wav";
 import matchSound from "./assets/sounds/match.mp3";
 import winSound from "./assets/sounds/win.mp3";
 
-import { TweenLite, TimelineLite, Back, Elastic } from "gsap";
+import { Back, Elastic, TweenLite, TimelineLite } from "gsap";
 
 class DengueMemory extends Component {
   state = {

@@ -1,6 +1,11 @@
+import { createSpeechlySpeechRecognition } from "@speechly/speech-recognition-polyfill";
 import React, { useEffect, useRef, useState } from "react";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import styled from "styled-components";
+
+const appId = "26b7708b-c382-4fbf-b536-0ab2b9dfd2f4";
+const SpeechlySpeechRecognition = createSpeechlySpeechRecognition(appId);
+SpeechRecognition.applyPolyfill(SpeechlySpeechRecognition);
 
 export default function Vdo() {
   const [volume, setVolume] = useState(0);
@@ -24,18 +29,21 @@ export default function Vdo() {
   };
   const recognizeVoice = () => {
     setStart(true);
-
     SpeechRecognition.startListening();
   };
+  useEffect(() => {
+    detectVoice();
+  }, []);
 
+  // console.log(browserSupportsSpeechRecognition);
   useEffect(() => {
     if (!transcript) return;
-    console.log(transcript);
     if (containsWordFromArray(transcript)) {
       setSuccess(`Success`);
     } else {
       setSuccess(null);
     }
+    SpeechRecognition.stopListening();
   }, [transcript]);
 
   const detectVoice = () => {
@@ -55,23 +63,10 @@ export default function Vdo() {
         const updateVolume = () => {
           analyser.getByteFrequencyData(dataArray);
           const average = dataArray.reduce((acc, val) => acc + val, 0) / bufferLength;
-          let _v = Math.round((average / 255) * 100);
+          let _v = Math.round((average / 255) * 100 * 3);
+          _v = _v > 100 ? 100 : _v;
           setVolume(_v);
           max_v = _v > max_v ? _v : max_v;
-          // console.log(_v);
-          if (shoutStart.current == null && _v >= 10) {
-            shoutStart.current = new Date();
-          } else if (shoutStart.current && _v < 10) {
-            console.log("END");
-            const shoutEnd = new Date();
-            const shoutDuration = (shoutEnd.getTime() - shoutStart.current.getTime()) / 1000;
-            shoutStart.current = null;
-            // update leaderboard
-            const newEntry = { volume: max_v, time: shoutDuration };
-            max_v = 0;
-            const newLeaderboard = [...leaderboard.current, newEntry].sort((a, b) => b.volume - a.volume);
-            leaderboard.current = newLeaderboard.slice(0, 5);
-          }
         };
         updateVolumeInterval = setInterval(updateVolume, 100);
       } catch (error) {
@@ -112,11 +107,11 @@ export default function Vdo() {
             Click to start recognition
           </Button>
         )}
-        {/* <Subtitle>How loud can you shout?</Subtitle> */}
-        {/* <VolumeLevel>{volume}</VolumeLevel>
+        <Subtitle>How loud can you shout?</Subtitle>
+        <VolumeLevel>{volume}</VolumeLevel>
         <VolumeBar style={{ width: `${volume}%` }}>
           <div></div>
-        </VolumeBar> */}
+        </VolumeBar>
       </VolumeContainer>
     </SoundMeterContainer>
   );
@@ -186,7 +181,8 @@ const Title = styled.div`
 `;
 
 const Subtitle = styled.h2`
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-top: 30px;
   margin-bottom: 20px;
   color: #666;
 `;

@@ -1,35 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./PruDistance.scss";
-import Near1 from "./imgs/500m-1.jpg";
-import Near2 from "./imgs/500m-2.jpg";
-import Near3 from "./imgs/500m-3.jpg";
-import Away1 from "./imgs/away-1.jpg";
-import Away2 from "./imgs/away-2.jpg";
-import Away3 from "./imgs/away-3.jpg";
+
 import { gsap } from "gsap";
 
-const nearPanelDist = [
-  {
-    id: 10448,
-    distance: 162,
-  },
-  {
-    id: 9490,
-    distance: 270,
-  },
-  {
-    id: 8877,
-    distance: 307,
-  },
-  {
-    id: 9144,
-    distance: 438,
-  },
-  {
-    id: 9445,
-    distance: 496,
-  },
-];
 const nearDistance = [162, 270, 307, 438, 496];
 
 const PruDistance = () => {
@@ -44,22 +17,35 @@ const PruDistance = () => {
     const urlParams = new URLSearchParams(window.location.search);
     let distance = urlParams.get("distance");
     const is_near = nearDistance.includes(parseInt(distance));
+
     setDistance(distance);
     setNear(is_near);
-
     startRotate(is_near);
+    fadePic(is_near);
+    window.addEventListener("focus", restartAnim);
 
     return () => {
+      window.removeEventListener("focus", restartAnim);
       rotateRef.current && clearInterval(rotateRef.current);
     };
   }, []);
 
+  const restartAnim = () => {
+    rotateRef.current && clearInterval(rotateRef.current);
+    startRotate(near);
+  };
+
+  window.BroadSignPlay = () => {
+    restartAnim();
+  };
+
+  //
   const startRotate = (is_near) => {
     const ten_sec = 1000 * 10;
+
     rotateRef.current = setInterval(() => {
       fadePic(is_near);
     }, ten_sec);
-    fadePic(is_near);
   };
 
   const prev_rand_num = useRef(-1);
@@ -85,12 +71,19 @@ const PruDistance = () => {
   return (
     <div className="pru-distance">
       {near && <div className="AlbertExtrabold distance">{distance}m ahead.</div>}
-      <img src={Near1} alt="Near" className="img Near1" />
+      <img src={"/images/pru-distance/near-1.png"} alt="Near" className="img Near1" />
+      <img src={"/images/pru-distance/near-2.png"} alt="Near" className="img Near2" />
+      <img src={"/images/pru-distance/near-3.png"} alt="Near" className="img Near3" />
+      <img src={"/images/pru-distance/away-1.jpg"} alt="Near" className="img Away1" />
+      <img src={"/images/pru-distance/away-2.jpg"} alt="Near" className="img Away2" />
+      <img src={"/images/pru-distance/away-3.png"} alt="Near" className="img Away3" />
+
+      {/* <img src={Near1} alt="Near" className="img Near1" />
       <img src={Near2} alt="Near" className="img Near2" />
       <img src={Near3} alt="Near" className="img Near3" />
       <img src={Away1} alt="Away" className="img Away1" />
       <img src={Away2} alt="Away" className="img Away2" />
-      <img src={Away3} alt="Away" className="img Away3" />
+      <img src={Away3} alt="Away" className="img Away3" /> */}
     </div>
   );
 };
