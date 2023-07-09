@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "ZetaLight";
+  src: url("./fonts/Zetafonts-Light.ttf");
+}
+@font-face {
+  font-family: "ZetaRegular";
+  src: url("./fonts/Zetafonts-Regular.ttf");
+}
+#AirAsia {
+  /* // /images/air-asia/bg.png */
+  background-image: url("./img/bg.png");
+  .intro-cloud {
+    position: absolute;
+    top: 57%;
+    left: 0%;
+  }
+  .plane {
+    width: 250px;
+    position: absolute;
+    top: 22.5%;
+    left: 23%;
+    z-index: 1;
+  }
+
+  .cloud-one-up {
+    position: absolute;
+    top: 10.5%;
+    left: 0px;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .set-txt {
+    position: absolute;
+    top: 33%;
+    z-index: 11;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cloud-one-down {
+    position: absolute;
+    left: 0px;
+    top: 37.4%;
+    z-index: 2;
+  }
+  .cloud-two-bg {
+    position: absolute;
+    right: -5px;
+    top: 10.5%;
+  }
+  .plane-fly-in {
+    position: absolute;
+    width: 98%;
+    top: 17.8%;
+    z-index: 2;
+  }
+  .gold-sleet {
+    width: 100%;
+    position: absolute;
+    top: 10.5%;
+    height: 1240px;
+  }
+  .center {
+    display: flex;
+    margin: auto;
+  }
+  .start-pack-txt {
+    text-align: center;
+    font-size: 66px;
+    margin-top: 11px;
+  }
+  .better-luck-txt {
+    font-size: 60px;
+  }
+  .cloud-two-up {
+    position: absolute;
+    top: 10.5%;
+    left: 0px;
+    z-index: 3;
+  }
+  .cloud-two-down {
+    position: absolute;
+    top: 28%;
+    z-index: 1;
+    right: -4px;
+    width: 101%;
+  }
+  .txt-light {
+    color: #e7bb80;
+    font-family: "ZetaLight";
+  }
+  .txt-regular {
+    color: #e7bb80;
+
+    font-family: "ZetaRegular";
+  }
+  .say-txt {
+    font-size: 78px;
+    text-align: center;
+  }
+  .game-over {
+    width: 100%;
+  }
+  .yass-gp {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -26,6 +26,7 @@ import FaceEmotion from "pages/FaceEmotion/FaceEmotion";
 import FaceSmileFilter from "pages/FaceSmileFilter/FaceSmileFilter";
 import PruDistance from "pages/PruDistance/PruDistance";
 import McdClock2 from "pages/MCD-2.0/McdClock2";
+import AirAsia from "pages/AirAsia/AirAsia";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
       <Route path="/soccer" exact render={() => <McdWorldCup demo={true} />} />
       <Route path="/igugc" exact render={() => <Llap demo={true} />} />
       <Route path="/weather" exact render={() => <Uniqlo demo={true} />} />
+      <Route path="/air-asia" exact render={() => <AirAsia />} />
     </Router>
   );
 }
