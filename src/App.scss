@@ -102,7 +102,10 @@ body,
   // min-height: 100vh;
   padding-top: 50px;
   height: auto !important;
-  margin-bottom: 300px;
+  padding-bottom: 300px;
+  @media (max-width: 768px) {
+    padding-top: 40px;
+  }
   .clear-channel-logo {
     // height: 40px;
     width: 500px;
@@ -117,7 +120,7 @@ body,
     // margin-top: 143px;
 
     @media (max-width: 768px) {
-      width: 200px;
+      width: 150px;
       // margin: 0px;
       margin-top: 0px;
       margin-left: 0px;
@@ -168,6 +171,9 @@ body,
         width: 100px;
         height: 100px;
       }
+    }
+    .home-app-vdo {
+      width: 100%;
     }
   }
 }

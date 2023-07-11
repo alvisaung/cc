@@ -5,31 +5,34 @@ import "../App.scss";
 class Home extends Component {
   image = [
     {
-      src: "./images/Bagel.png",
+      src: "./video/bagel.mp4",
       name: "Bagel",
       url: "/bagel?anim=true",
+      is_vdo: true,
     },
     {
-      src: "./images/DengueMemoryGame.png",
+      src: "./video/dengue.mp4",
       name: "Memory Game",
       url: "/dengue-memory-game",
+      is_vdo: true,
     },
-
     {
-      src: "./images/GiftCatching.jpg",
+      src: "./video/gift-catch.mp4",
       name: "Gift Catching",
       url: "/scb-yec",
+      is_vdo: true,
     },
-
     {
-      src: "./images/HSBC-Golf-Game.jpg",
+      src: "./video/golf.mp4",
       name: "HSBC Golf Game",
       url: "/hsbc-golf-swing",
+      is_vdo: true,
     },
     {
-      src: "./images/Jap-Curry-Game.jpg",
+      src: "./video/jap-curry.mp4",
       name: "Jap Curry Game",
       url: "/jap-curry-game",
+      is_vdo: true,
     },
     {
       src: "./images/uniqlo.png",
@@ -88,7 +91,13 @@ class Home extends Component {
             return (
               <div className="icon-gp">
                 <Link key={i} to={item.url}>
-                  <img src={item?.src} alt="Imgs" className="home-app-icon" />
+                  {item.is_vdo ? (
+                    <video className="home-app-vdo" autoPlay loop muted>
+                      <source src={item.src} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <img src={item?.src} alt="Imgs" className="home-app-icon" />
+                  )}
                   <div className="home-app-name">{item?.name}</div>
                 </Link>
               </div>
