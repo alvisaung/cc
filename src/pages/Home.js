@@ -11,7 +11,7 @@ class Home extends Component {
     },
     {
       src: "./images/DengueMemoryGame.png",
-      name: "Dengue Memory Game",
+      name: "Memory Game",
       url: "/dengue-memory-game",
     },
 
@@ -80,49 +80,20 @@ class Home extends Component {
   ];
   render() {
     return (
-      <div style={{ display: "flex", justifyContent: "center", padding: 80, backgroundColor: "#282c34", minHeight: "100vh" }}>
-        <div style={{ marginTop: 100 }}>
-          <img src={"./images/logo.png"} className="App-logo" alt="logo" />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              alignSelf: "center",
-              flexWrap: "wrap",
-              gap: 30,
-              rowGap: 60,
-            }}
-          >
-            {this.image?.map((item, i) => {
-              return (
+      <div className="home-app-gp">
+        <img src={"./images/logo.png"} className="clear-channel-logo" alt="logo" />
+
+        <div className="home-app-wrapper">
+          {this.image?.map((item, i) => {
+            return (
+              <div className="icon-gp">
                 <Link key={i} to={item.url}>
-                  <img
-                    src={item?.src}
-                    alt="Imgs"
-                    style={{
-                      width: 200,
-                      height: 200,
-                      backgroundColor: "white",
-                      marginRight: "5px",
-                      borderRadius: 10,
-                      objectFit: "cover",
-                    }}
-                  />
-                  <div
-                    style={{
-                      textAlign: "center",
-                      fontSize: "20px",
-                      color: "white",
-                      marginTop: 6,
-                    }}
-                  >
-                    {item?.name}
-                  </div>
+                  <img src={item?.src} alt="Imgs" className="home-app-icon" />
+                  <div className="home-app-name">{item?.name}</div>
                 </Link>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     );
